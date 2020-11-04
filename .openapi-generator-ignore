@@ -25,3 +25,5 @@
 composer.json
 git_push.sh
 README.md
+lib/PaygreenApiClient.php
+lib/PaygreenApiClientInterface.php
