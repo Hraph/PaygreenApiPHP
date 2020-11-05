@@ -32,6 +32,11 @@ interface PaygreenApiClientInterface
     public function setConfig($config);
 
     /**
+     * @param $bool
+     */
+    public function useSandboxApi($bool);
+
+    /**
      * @param $apiKey string
      */
     public function setApiKey($apiKey);

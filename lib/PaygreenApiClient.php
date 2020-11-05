@@ -22,6 +22,8 @@ use Hraph\PaygreenApi\Api\RechercheApi;
 class PaygreenApiClient implements PaygreenApiClientInterface
 {
     const API_KEY_IDENTIFIER = "Bearer";
+    const API_HOST = "https://paygreen.fr";
+    const SANDBOX_API_HOST = "https://sandbox.paygreen.fr";
 
     /**
      * @var Configuration|null
@@ -145,6 +147,17 @@ class PaygreenApiClient implements PaygreenApiClientInterface
     public function setConfig($config)
     {
         $this->config = $config;
+    }
+
+    /**
+     * @param $bool
+     */
+    public function useSandboxApi($bool)
+    {
+        if ($bool)
+            $this->setHost(self::SANDBOX_API_HOST);
+        else
+            $this->setHost(self::API_HOST);
     }
 
     /**
