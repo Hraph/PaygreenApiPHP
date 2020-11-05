@@ -3,7 +3,6 @@
 
 namespace Hraph\PaygreenApi;
 
-
 use GuzzleHttp\Client;
 use Hraph\PaygreenApi\Api\GestionDeLadresseApi;
 use Hraph\PaygreenApi\Api\GestionDeMesBoutiquesApi;
@@ -31,6 +30,36 @@ interface PaygreenApiClientInterface
      * @param Configuration|null $config
      */
     public function setConfig($config);
+
+    /**
+     * @param $apiKey string
+     */
+    public function setApiKey($apiKey);
+    /**
+     * @return string
+     */
+    public function getApiKey();
+
+    /**
+     * @return string
+     */
+    public function getAccessToken();
+
+    /**
+     * @param string $accessToken
+     * @return string
+     */
+    public function setAccessToken($accessToken);
+
+    /**
+     * @return string
+     */
+    public function getHost();
+
+    /**
+     * @param $host string
+     */
+    public function setHost($host);
 
     /**
      * @return HeaderSelector|null
