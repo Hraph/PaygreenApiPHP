@@ -21,10 +21,6 @@ use Hraph\PaygreenApi\Api\RechercheApi;
 
 class PaygreenApiClient implements PaygreenApiClientInterface
 {
-    const API_KEY_IDENTIFIER = "Bearer";
-    const API_HOST = "https://paygreen.fr";
-    const SANDBOX_API_HOST = "https://sandbox.paygreen.fr";
-
     /**
      * @var Configuration|null
      */
@@ -111,6 +107,8 @@ class PaygreenApiClient implements PaygreenApiClientInterface
                                 $host_index = 0)
     {
         $this->config = $config;
+        $this->config->setApiKeyPrefix(self::API_KEY_IDENTIFIER, self::API_KEY_PREFIX); // Set api prefix
+
         $this->headerSelector = $selector;
         $this->httpClient = new Client();
 
@@ -179,18 +177,25 @@ class PaygreenApiClient implements PaygreenApiClientInterface
     /**
      * @return string
      */
-    public function getAccessToken()
+    public function getApiKeyWithPrefix()
     {
-        return $this->config->getAccessToken();
+        return $this->config->getApiKeyWithPrefix(self::API_KEY_IDENTIFIER);
     }
 
     /**
-     * @param string $accessToken
+     * @param $username string
+     */
+    public function setUsername($username)
+    {
+        $this->config->setUsername($username);
+    }
+
+    /**
      * @return string
      */
-    public function setAccessToken($accessToken)
+    public function getUsername()
     {
-        $this->config->setAccessToken($accessToken);
+        return $this->config->getUsername();
     }
 
     /**

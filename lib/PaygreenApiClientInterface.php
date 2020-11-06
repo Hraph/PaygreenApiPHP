@@ -21,6 +21,11 @@ use Hraph\PaygreenApi\Api\RechercheApi;
 
 interface PaygreenApiClientInterface
 {
+    const API_KEY_IDENTIFIER = "paygreen";
+    const API_KEY_PREFIX = "Bearer";
+    const API_HOST = "https://paygreen.fr";
+    const SANDBOX_API_HOST = "https://sandbox.paygreen.fr";
+
     /**
      * @return Configuration|null
      */
@@ -40,6 +45,7 @@ interface PaygreenApiClientInterface
      * @param $apiKey string
      */
     public function setApiKey($apiKey);
+
     /**
      * @return string
      */
@@ -48,13 +54,17 @@ interface PaygreenApiClientInterface
     /**
      * @return string
      */
-    public function getAccessToken();
+    public function getApiKeyWithPrefix();
 
     /**
-     * @param string $accessToken
      * @return string
      */
-    public function setAccessToken($accessToken);
+    public function getUsername();
+
+    /**
+     * @param string
+     */
+    public function setUsername($username);
 
     /**
      * @return string
