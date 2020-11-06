@@ -110,6 +110,7 @@ class PaygreenApiClient implements PaygreenApiClientInterface
         $this->config->setApiKeyPrefix(self::API_KEY_IDENTIFIER, self::API_KEY_PREFIX); // Set api prefix
 
         $this->headerSelector = $selector;
+        $this->headerSelector->selectHeaders(["application/json"], ["application/json"]); // Set accept and content type for api
         $this->httpClient = new Client();
 
         // Create sub clients
