@@ -289,7 +289,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -356,7 +356,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -434,7 +434,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -494,7 +494,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -563,7 +563,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -632,7 +632,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -703,7 +703,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -765,7 +765,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -825,7 +825,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -896,7 +896,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -956,7 +956,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -1027,7 +1027,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -1087,7 +1087,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -1158,7 +1158,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -1218,7 +1218,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -1287,7 +1287,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -1354,7 +1354,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -1403,7 +1403,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -1465,7 +1465,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -1532,7 +1532,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -1608,7 +1608,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -1684,7 +1684,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -1753,7 +1753,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -1824,7 +1824,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -1895,7 +1895,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -1966,7 +1966,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -2037,7 +2037,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -2106,7 +2106,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -2175,7 +2175,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -2237,7 +2237,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -2304,7 +2304,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -2353,7 +2353,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -2424,7 +2424,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -2486,7 +2486,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -2562,7 +2562,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -2629,7 +2629,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -2678,7 +2678,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -2740,7 +2740,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -2809,7 +2809,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -2869,7 +2869,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -2940,7 +2940,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -3009,7 +3009,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"
@@ -3078,7 +3078,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "Identifiant",
+            "name": "identifiant",
             "description": "Votre identifiant PayGreen",
             "required": true,
             "type": "string"

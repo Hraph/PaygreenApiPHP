@@ -333,7 +333,7 @@ class GestionDeLaBoutiqueApi
         // path params
         if ($identifiant !== null) {
             $resourcePath = str_replace(
-                '{' . 'Identifiant' . '}',
+                '{' . 'identifiant' . '}',
                 ObjectSerializer::toPathValue($identifiant),
                 $resourcePath
             );
@@ -632,7 +632,7 @@ class GestionDeLaBoutiqueApi
         // path params
         if ($identifiant !== null) {
             $resourcePath = str_replace(
-                '{' . 'Identifiant' . '}',
+                '{' . 'identifiant' . '}',
                 ObjectSerializer::toPathValue($identifiant),
                 $resourcePath
             );
@@ -934,7 +934,7 @@ class GestionDeLaBoutiqueApi
         // path params
         if ($identifiant !== null) {
             $resourcePath = str_replace(
-                '{' . 'Identifiant' . '}',
+                '{' . 'identifiant' . '}',
                 ObjectSerializer::toPathValue($identifiant),
                 $resourcePath
             );
@@ -1236,7 +1236,7 @@ class GestionDeLaBoutiqueApi
         // path params
         if ($identifiant !== null) {
             $resourcePath = str_replace(
-                '{' . 'Identifiant' . '}',
+                '{' . 'identifiant' . '}',
                 ObjectSerializer::toPathValue($identifiant),
                 $resourcePath
             );
@@ -1538,7 +1538,7 @@ class GestionDeLaBoutiqueApi
         // path params
         if ($identifiant !== null) {
             $resourcePath = str_replace(
-                '{' . 'Identifiant' . '}',
+                '{' . 'identifiant' . '}',
                 ObjectSerializer::toPathValue($identifiant),
                 $resourcePath
             );
@@ -1856,7 +1856,7 @@ class GestionDeLaBoutiqueApi
         // path params
         if ($identifiant !== null) {
             $resourcePath = str_replace(
-                '{' . 'Identifiant' . '}',
+                '{' . 'identifiant' . '}',
                 ObjectSerializer::toPathValue($identifiant),
                 $resourcePath
             );

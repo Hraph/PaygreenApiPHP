@@ -333,7 +333,7 @@ class LempreinteDeCarteApi
         // path params
         if ($identifiant !== null) {
             $resourcePath = str_replace(
-                '{' . 'Identifiant' . '}',
+                '{' . 'identifiant' . '}',
                 ObjectSerializer::toPathValue($identifiant),
                 $resourcePath
             );
@@ -584,7 +584,7 @@ class LempreinteDeCarteApi
         // path params
         if ($identifiant !== null) {
             $resourcePath = str_replace(
-                '{' . 'Identifiant' . '}',
+                '{' . 'identifiant' . '}',
                 ObjectSerializer::toPathValue($identifiant),
                 $resourcePath
             );
@@ -891,7 +891,7 @@ class LempreinteDeCarteApi
         // path params
         if ($identifiant !== null) {
             $resourcePath = str_replace(
-                '{' . 'Identifiant' . '}',
+                '{' . 'identifiant' . '}',
                 ObjectSerializer::toPathValue($identifiant),
                 $resourcePath
             );
@@ -1198,7 +1198,7 @@ class LempreinteDeCarteApi
         // path params
         if ($identifiant !== null) {
             $resourcePath = str_replace(
-                '{' . 'Identifiant' . '}',
+                '{' . 'identifiant' . '}',
                 ObjectSerializer::toPathValue($identifiant),
                 $resourcePath
             );

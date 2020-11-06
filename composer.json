@@ -2,7 +2,7 @@
     "name": "hraph/paygreen-api-php",
     "description": "PHP SQK for Paygreen.io payment provider",
     "type": "library",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "keywords": [
         "paygreen",
         "openapi",
