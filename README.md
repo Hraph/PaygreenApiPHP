@@ -1,7 +1,8 @@
 # Paygreen.io API for PHP
-PHP SDK for Paygreen.io payment provider
+PHP SDK for Paygreen.io payment provider generated using OpenAPI Generator
 
-Specications for Paygreen.io API are available [here](https://paygreen.fr/documentation/api-documentation-categorie?cat=all)
+
+Specifications for Paygreen.io API are available [here](https://paygreen.fr/documentation/api-documentation-categorie?cat=all)
 
 ## Requirements
 
