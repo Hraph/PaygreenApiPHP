@@ -41,67 +41,67 @@ class PaygreenApiClient implements PaygreenApiClientInterface
     /**
      * @var AuthentificationOAuthApi
      */
-    private $oAuth;
+    private $oAuthApi;
     /**
      * @var GestionDeLadresseApi
      */
-    private $address;
+    private $addressApi;
     /**
      * @var GestionDeMesRIBApi
      */
-    private $bank;
+    private $bankApi;
     /**
      * @var GestionDeLadresseApi
      */
-    private $shop;
+    private $shopApi;
     /**
      * @var GestionDeMesBoutiquesApi
      */
-    private $shops;
+    private $shopsApi;
     /**
      * @var GestionDesDocumentsKYCsApi
      */
-    private $documents;
+    private $documentsApi;
     /**
      * @var GestionDesPropritairesApi
      */
-    private $shareHolder;
+    private $shareHolderApi;
     /**
      * @var GestionDuComptePrincipalApi
      */
-    private $account;
+    private $accountApi;
     /**
      * @var GestionDuneAssociationApi
      */
-    private $solidarity;
+    private $solidarityApi;
     /**
      * @var LesDonsApi
      */
-    private $solidarityId;
+    private $solidarityIdApi;
     /**
      * @var LesMoyensDePaiementApi
      */
-    private $paymentType;
+    private $paymentTypeApi;
     /**
      * @var LempreinteDeCarteApi
      */
-    private $payinsCardprint;
+    private $payinsCardprintApi;
     /**
      * @var LesTransactionsApi
      */
-    private $payinsTransaction;
+    private $payinsTransactionApi;
     /**
      * @var PaiementMultidestinataireApi
      */
-    private $payinsMulticash;
+    private $payinsMulticashApi;
     /**
      * @var RechercheApi
      */
-    private $payinsSearch;
+    private $payinsSearchApi;
     /**
      * @var LesVirementsApi
      */
-    private $payoutTransfer;
+    private $payoutTransferApi;
 
     /**
      * PaygreenApiClient constructor.
@@ -115,22 +115,22 @@ class PaygreenApiClient implements PaygreenApiClientInterface
         $this->httpClient = new Client();
 
         // Create sub clients
-        $this->oAuth = new AuthentificationOAuthApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->address = new GestionDeLadresseApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->bank = new GestionDeMesRIBApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->shop = new GestionDeLadresseApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->shops = new GestionDeMesBoutiquesApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->documents = new GestionDesDocumentsKYCsApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->shareHolder = new GestionDesPropritairesApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->account = new GestionDuComptePrincipalApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->solidarity = new GestionDuneAssociationApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->solidarityId = new LesDonsApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->paymentType = new LesMoyensDePaiementApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->payinsCardprint = new LempreinteDeCarteApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->payinsTransaction = new LesTransactionsApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->payinsMulticash = new PaiementMultidestinataireApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->payinsSearch = new RechercheApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->payoutTransfer = new LesVirementsApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->oAuthApi = new AuthentificationOAuthApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->addressApi = new GestionDeLadresseApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->bankApi = new GestionDeMesRIBApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->shopApi = new GestionDeLadresseApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->shopsApi = new GestionDeMesBoutiquesApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->documentsApi = new GestionDesDocumentsKYCsApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->shareHolderApi = new GestionDesPropritairesApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->accountApi = new GestionDuComptePrincipalApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->solidarityApi = new GestionDuneAssociationApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->solidarityIdApi = new LesDonsApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->paymentTypeApi = new LesMoyensDePaiementApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->payinsCardprintApi = new LempreinteDeCarteApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->payinsTransactionApi = new LesTransactionsApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->payinsMulticashApi = new PaiementMultidestinataireApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->payinsSearchApi = new RechercheApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->payoutTransferApi = new LesVirementsApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
     }
 
     /**
@@ -242,114 +242,130 @@ class PaygreenApiClient implements PaygreenApiClientInterface
     }
 
     /**
-     * @return GestionDeMesRIBApi
+     * @return AuthentificationOAuthApi
      */
-    public function getBank()
+    public function getOAuthApi()
     {
-        return $this->bank;
+        return $this->oAuthApi;
     }
 
     /**
      * @return GestionDeLadresseApi
      */
-    public function getShop()
+    public function getAddressApi()
     {
-        return $this->shop;
+        return $this->addressApi;
+    }
+
+    /**
+     * @return GestionDeMesRIBApi
+     */
+    public function getBankApi()
+    {
+        return $this->bankApi;
+    }
+
+    /**
+     * @return GestionDeLadresseApi
+     */
+    public function getShopApi()
+    {
+        return $this->shopApi;
     }
 
     /**
      * @return GestionDeMesBoutiquesApi
      */
-    public function getShops()
+    public function getShopsApi()
     {
-        return $this->shops;
+        return $this->shopsApi;
     }
 
     /**
      * @return GestionDesDocumentsKYCsApi
      */
-    public function getDocuments()
+    public function getDocumentsApi()
     {
-        return $this->documents;
+        return $this->documentsApi;
     }
 
     /**
      * @return GestionDesPropritairesApi
      */
-    public function getShareHolder()
+    public function getShareHolderApi()
     {
-        return $this->shareHolder;
+        return $this->shareHolderApi;
     }
 
     /**
      * @return GestionDuComptePrincipalApi
      */
-    public function getAccount()
+    public function getAccountApi()
     {
-        return $this->account;
+        return $this->accountApi;
     }
 
     /**
      * @return GestionDuneAssociationApi
      */
-    public function getSolidarity()
+    public function getSolidarityApi()
     {
-        return $this->solidarity;
+        return $this->solidarityApi;
     }
 
     /**
      * @return LesDonsApi
      */
-    public function getSolidarityId()
+    public function getSolidarityIdApi()
     {
-        return $this->solidarityId;
+        return $this->solidarityIdApi;
     }
 
     /**
      * @return LesMoyensDePaiementApi
      */
-    public function getPaymentType()
+    public function getPaymentTypeApi()
     {
-        return $this->paymentType;
+        return $this->paymentTypeApi;
     }
 
     /**
      * @return LempreinteDeCarteApi
      */
-    public function getPayinsCardprint()
+    public function getPayinsCardprintApi()
     {
-        return $this->payinsCardprint;
+        return $this->payinsCardprintApi;
     }
 
     /**
      * @return LesTransactionsApi
      */
-    public function getPayinsTransaction()
+    public function getPayinsTransactionApi()
     {
-        return $this->payinsTransaction;
+        return $this->payinsTransactionApi;
     }
 
     /**
      * @return PaiementMultidestinataireApi
      */
-    public function getPayinsMulticash()
+    public function getPayinsMulticashApi()
     {
-        return $this->payinsMulticash;
+        return $this->payinsMulticashApi;
     }
 
     /**
      * @return RechercheApi
      */
-    public function getPayinsSearch()
+    public function getPayinsSearchApi()
     {
-        return $this->payinsSearch;
+        return $this->payinsSearchApi;
     }
 
     /**
      * @return LesVirementsApi
      */
-    public function getPayoutTransfer()
+    public function getPayoutTransferApi()
     {
-        return $this->payoutTransfer;
+        return $this->payoutTransferApi;
     }
 }

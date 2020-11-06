@@ -88,69 +88,69 @@ interface PaygreenApiClientInterface
     /**
      * @return GestionDeMesRIBApi
      */
-    public function getBank();
+    public function getBankApi();
 
     /**
      * @return GestionDeLadresseApi
      */
-    public function getShop();
+    public function getShopApi();
 
     /**
      * @return GestionDeMesBoutiquesApi
      */
-    public function getShops();
+    public function getShopsApi();
 
     /**
      * @return GestionDesDocumentsKYCsApi
      */
-    public function getDocuments();
+    public function getDocumentsApi();
 
     /**
      * @return GestionDesPropritairesApi
      */
-    public function getShareHolder();
+    public function getShareHolderApi();
 
     /**
      * @return GestionDuComptePrincipalApi
      */
-    public function getAccount();
+    public function getAccountApi();
 
     /**
      * @return GestionDuneAssociationApi
      */
-    public function getSolidarity();
+    public function getSolidarityApi();
 
     /**
      * @return LesDonsApi
      */
-    public function getSolidarityId();
+    public function getSolidarityIdApi();
 
     /**
      * @return LesMoyensDePaiementApi
      */
-    public function getPaymentType();
+    public function getPaymentTypeApi();
 
     /**
      * @return LempreinteDeCarteApi
      */
-    public function getPayinsCardprint();
+    public function getPayinsCardprintApi();
 
     /**
      * @return LesTransactionsApi
      */
-    public function getPayinsTransaction();
+    public function getPayinsTransactionApi();
 
     /**
      * @return PaiementMultidestinataireApi
      */
-    public function getPayinsMulticash();
+    public function getPayinsMulticashApi();
     /**
      * @return RechercheApi
      */
-    public function getPayinsSearch();
+    public function getPayinsSearchApi();
 
     /**
      * @return LesVirementsApi
      */
-    public function getPayoutTransfer();
+    public function getPayoutTransferApi();
 }
