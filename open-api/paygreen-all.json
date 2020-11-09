@@ -3954,6 +3954,35 @@
           "type": "integer",
           "format": "int64"
         },
+        "buyer": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "123654789"
+            },
+            "lastName": {
+              "type": "string",
+              "example": "Pay"
+            },
+            "firstName": {
+              "type": "string",
+              "example": "Green"
+            },
+            "email": {
+              "type": "string",
+              "example": "contact@paygreen.fr"
+            },
+            "country": {
+              "type": "string",
+              "example": "FR"
+            },
+            "companyName": {
+              "type": "string",
+              "example": "PayGreen"
+            }
+          }
+        },
         "orderDetails": {
           "type": "object",
           "properties": {

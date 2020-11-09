@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **returned_url** | **string** | Adresse sur laquelle il faut rediriger le client après que l&#39;action a été effectuée. | [optional] 
 **notified_url** | **string** | Adresse sur laquelle PayGreen peut faire des appels pour mettre à jour le statut. | [optional] 
 **id_fingerprint** | **int** |  | [optional] 
+**buyer** | [**\Hraph\PaygreenApi\Model\PayinsBuyer**](PayinsBuyer.md) |  | [optional] 
 **order_details** | [**\Hraph\PaygreenApi\Model\PayinsReccOrderDetails**](PayinsReccOrderDetails.md) |  | [optional] 
 **card** | [**\Hraph\PaygreenApi\Model\PayinsCard**](PayinsCard.md) |  | [optional] 
 **metadata** | **string[]** |  | [optional] 

@@ -64,6 +64,7 @@ class PayinsRecc implements ModelInterface, ArrayAccess
         'returned_url' => 'string',
         'notified_url' => 'string',
         'id_fingerprint' => 'int',
+        'buyer' => '\Hraph\PaygreenApi\Model\PayinsBuyer',
         'order_details' => '\Hraph\PaygreenApi\Model\PayinsReccOrderDetails',
         'card' => '\Hraph\PaygreenApi\Model\PayinsCard',
         'metadata' => 'string[]',
@@ -87,6 +88,7 @@ class PayinsRecc implements ModelInterface, ArrayAccess
         'returned_url' => null,
         'notified_url' => null,
         'id_fingerprint' => 'int64',
+        'buyer' => null,
         'order_details' => null,
         'card' => null,
         'metadata' => null,
@@ -131,6 +133,7 @@ class PayinsRecc implements ModelInterface, ArrayAccess
         'returned_url' => 'returned_url',
         'notified_url' => 'notified_url',
         'id_fingerprint' => 'idFingerprint',
+        'buyer' => 'buyer',
         'order_details' => 'orderDetails',
         'card' => 'card',
         'metadata' => 'metadata',
@@ -154,6 +157,7 @@ class PayinsRecc implements ModelInterface, ArrayAccess
         'returned_url' => 'setReturnedUrl',
         'notified_url' => 'setNotifiedUrl',
         'id_fingerprint' => 'setIdFingerprint',
+        'buyer' => 'setBuyer',
         'order_details' => 'setOrderDetails',
         'card' => 'setCard',
         'metadata' => 'setMetadata',
@@ -177,6 +181,7 @@ class PayinsRecc implements ModelInterface, ArrayAccess
         'returned_url' => 'getReturnedUrl',
         'notified_url' => 'getNotifiedUrl',
         'id_fingerprint' => 'getIdFingerprint',
+        'buyer' => 'getBuyer',
         'order_details' => 'getOrderDetails',
         'card' => 'getCard',
         'metadata' => 'getMetadata',
@@ -254,6 +259,7 @@ class PayinsRecc implements ModelInterface, ArrayAccess
         $this->container['returned_url'] = isset($data['returned_url']) ? $data['returned_url'] : null;
         $this->container['notified_url'] = isset($data['notified_url']) ? $data['notified_url'] : null;
         $this->container['id_fingerprint'] = isset($data['id_fingerprint']) ? $data['id_fingerprint'] : null;
+        $this->container['buyer'] = isset($data['buyer']) ? $data['buyer'] : null;
         $this->container['order_details'] = isset($data['order_details']) ? $data['order_details'] : null;
         $this->container['card'] = isset($data['card']) ? $data['card'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
@@ -461,6 +467,30 @@ class PayinsRecc implements ModelInterface, ArrayAccess
     public function setIdFingerprint($id_fingerprint)
     {
         $this->container['id_fingerprint'] = $id_fingerprint;
+
+        return $this;
+    }
+
+    /**
+     * Gets buyer
+     *
+     * @return \Hraph\PaygreenApi\Model\PayinsBuyer|null
+     */
+    public function getBuyer()
+    {
+        return $this->container['buyer'];
+    }
+
+    /**
+     * Sets buyer
+     *
+     * @param \Hraph\PaygreenApi\Model\PayinsBuyer|null $buyer buyer
+     *
+     * @return $this
+     */
+    public function setBuyer($buyer)
+    {
+        $this->container['buyer'] = $buyer;
 
         return $this;
     }
