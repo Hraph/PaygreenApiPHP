@@ -4,6 +4,8 @@
 namespace Hraph\PaygreenApi;
 
 use GuzzleHttp\Client;
+use Hraph\PaygreenApi\Api\AuthentificationOAuthApi;
+use Hraph\PaygreenApi\Api\GestionDeLaBoutiqueApi;
 use Hraph\PaygreenApi\Api\GestionDeLadresseApi;
 use Hraph\PaygreenApi\Api\GestionDeMesBoutiquesApi;
 use Hraph\PaygreenApi\Api\GestionDeMesRIBApi;
@@ -96,12 +98,22 @@ interface PaygreenApiClientInterface
     public function setHttpClient($httpClient);
 
     /**
+     * @return AuthentificationOAuthApi
+     */
+    public function getOAuthApi();
+
+    /**
+     * @return GestionDeLadresseApi
+     */
+    public function getAddressApi();
+
+    /**
      * @return GestionDeMesRIBApi
      */
     public function getBankApi();
 
     /**
-     * @return GestionDeLadresseApi
+     * @return GestionDeLaBoutiqueApi
      */
     public function getShopApi();
 

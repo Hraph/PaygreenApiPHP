@@ -4,6 +4,7 @@ namespace Hraph\PaygreenApi;
 
 use GuzzleHttp\Client;
 use Hraph\PaygreenApi\Api\AuthentificationOAuthApi;
+use Hraph\PaygreenApi\Api\GestionDeLaBoutiqueApi;
 use Hraph\PaygreenApi\Api\GestionDeLadresseApi;
 use Hraph\PaygreenApi\Api\GestionDeMesBoutiquesApi;
 use Hraph\PaygreenApi\Api\GestionDeMesRIBApi;
@@ -47,7 +48,7 @@ class PaygreenApiClient implements PaygreenApiClientInterface
      */
     private $bankApi;
     /**
-     * @var GestionDeLadresseApi
+     * @var GestionDeLaBoutiqueApi
      */
     private $shopApi;
     /**
@@ -272,7 +273,7 @@ class PaygreenApiClient implements PaygreenApiClientInterface
     }
 
     /**
-     * @return GestionDeLadresseApi
+     * @return GestionDeLaBoutiqueApi
      */
     public function getShopApi()
     {
