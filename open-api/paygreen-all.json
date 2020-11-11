@@ -735,7 +735,10 @@
                   "example": 0
                 },
                 "data": {
-                  "$ref": "#/definitions/Shop"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Shop"
+                  }
                 }
               }
             }
@@ -928,7 +931,10 @@
                   "example": 0
                 },
                 "data": {
-                  "$ref": "#/definitions/Address"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Address"
+                  }
                 }
               }
             }
@@ -1059,7 +1065,10 @@
                   "example": 0
                 },
                 "data": {
-                  "$ref": "#/definitions/Shareholder"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Shareholder"
+                  }
                 }
               }
             }
@@ -1190,7 +1199,10 @@
                   "example": 0
                 },
                 "data": {
-                  "$ref": "#/definitions/Kyc"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Kyc"
+                  }
                 }
               }
             }
@@ -1435,7 +1447,10 @@
                   "example": 0
                 },
                 "data": {
-                  "$ref": "#/definitions/PartnerConfig"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/PartnerConfig"
+                  }
                 }
               }
             }
@@ -2207,7 +2222,10 @@
                   "example": 0
                 },
                 "data": {
-                  "$ref": "#/definitions/CardPrint"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/CardPrint"
+                  }
                 }
               }
             }
@@ -2456,7 +2474,10 @@
                   "example": 0
                 },
                 "data": {
-                  "$ref": "#/definitions/Association"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Association"
+                  }
                 }
               }
             }
@@ -2710,7 +2731,10 @@
                   "example": 0
                 },
                 "data": {
-                  "$ref": "#/definitions/Transaction"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Transaction"
+                  }
                 }
               }
             }
@@ -2841,7 +2865,10 @@
                   "example": 0
                 },
                 "data": {
-                  "$ref": "#/definitions/Rib"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Rib"
+                  }
                 }
               }
             }
@@ -3110,7 +3137,27 @@
                   "example": 0
                 },
                 "data": {
-                  "$ref": "#/definitions/Transfer"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Transfer"
+                  }
+                },
+                "paginator": {
+                  "type": "array",
+                  "items": {
+                    "current_page": {
+                      "type": "integer"
+                    },
+                    "page_count": {
+                      "type": "integer"
+                    },
+                    "page_size": {
+                      "type": "integer"
+                    },
+                    "total_items": {
+                      "type": "integer"
+                    }
+                  }
                 }
               }
             }
