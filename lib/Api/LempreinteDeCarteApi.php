@@ -125,7 +125,7 @@ class LempreinteDeCarteApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2009
+     * @return \Hraph\PaygreenApi\Model\InlineResponse20013
      */
     public function apiIdentifiantPayinsCardprintGet($identifiant, $authorization)
     {
@@ -143,7 +143,7 @@ class LempreinteDeCarteApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20013, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantPayinsCardprintGetWithHttpInfo($identifiant, $authorization)
     {
@@ -180,20 +180,20 @@ class LempreinteDeCarteApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2009' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse20013' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2009', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20013', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2009';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20013';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -212,7 +212,7 @@ class LempreinteDeCarteApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2009',
+                        '\Hraph\PaygreenApi\Model\InlineResponse20013',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -256,7 +256,7 @@ class LempreinteDeCarteApi
      */
     public function apiIdentifiantPayinsCardprintGetAsyncWithHttpInfo($identifiant, $authorization)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2009';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20013';
         $request = $this->apiIdentifiantPayinsCardprintGetRequest($identifiant, $authorization);
 
         return $this->client
@@ -673,7 +673,7 @@ class LempreinteDeCarteApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2009
+     * @return \Hraph\PaygreenApi\Model\InlineResponse20014
      */
     public function apiIdentifiantPayinsCardprintIdGet($identifiant, $authorization, $id)
     {
@@ -692,7 +692,7 @@ class LempreinteDeCarteApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20014, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantPayinsCardprintIdGetWithHttpInfo($identifiant, $authorization, $id)
     {
@@ -729,20 +729,20 @@ class LempreinteDeCarteApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2009' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse20014' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2009', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20014', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2009';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20014';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -761,7 +761,7 @@ class LempreinteDeCarteApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2009',
+                        '\Hraph\PaygreenApi\Model\InlineResponse20014',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -807,7 +807,7 @@ class LempreinteDeCarteApi
      */
     public function apiIdentifiantPayinsCardprintIdGetAsyncWithHttpInfo($identifiant, $authorization, $id)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2009';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20014';
         $request = $this->apiIdentifiantPayinsCardprintIdGetRequest($identifiant, $authorization, $id);
 
         return $this->client
@@ -980,7 +980,7 @@ class LempreinteDeCarteApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2009
+     * @return \Hraph\PaygreenApi\Model\InlineResponse20014
      */
     public function apiIdentifiantPayinsCardprintPost($identifiant, $authorization, $card_print)
     {
@@ -999,7 +999,7 @@ class LempreinteDeCarteApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20014, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantPayinsCardprintPostWithHttpInfo($identifiant, $authorization, $card_print)
     {
@@ -1036,20 +1036,20 @@ class LempreinteDeCarteApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2009' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse20014' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2009', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20014', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2009';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20014';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1068,7 +1068,7 @@ class LempreinteDeCarteApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2009',
+                        '\Hraph\PaygreenApi\Model\InlineResponse20014',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1114,7 +1114,7 @@ class LempreinteDeCarteApi
      */
     public function apiIdentifiantPayinsCardprintPostAsyncWithHttpInfo($identifiant, $authorization, $card_print)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2009';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20014';
         $request = $this->apiIdentifiantPayinsCardprintPostRequest($identifiant, $authorization, $card_print);
 
         return $this->client

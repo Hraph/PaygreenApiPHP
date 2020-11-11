@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## apiIdentifiantAccountGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse2003 apiIdentifiantAccountGet($identifiant, $authorization)
+> \Hraph\PaygreenApi\Model\InlineResponse2004 apiIdentifiantAccountGet($identifiant, $authorization)
 
 Afficher le compte principal
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 
 ## apiIdentifiantAccountPut
 
-> \Hraph\PaygreenApi\Model\InlineResponse2003 apiIdentifiantAccountPut($identifiant, $authorization, $account)
+> \Hraph\PaygreenApi\Model\InlineResponse2004 apiIdentifiantAccountPut($identifiant, $authorization, $account)
 
 Met à jour le compte principal
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 

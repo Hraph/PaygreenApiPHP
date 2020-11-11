@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## apiIdentifiantDocumentsGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse2006 apiIdentifiantDocumentsGet($identifiant, $authorization)
+> \Hraph\PaygreenApi\Model\InlineResponse2009 apiIdentifiantDocumentsGet($identifiant, $authorization)
 
 Liste des documents
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 ## apiIdentifiantDocumentsIdGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse2006 apiIdentifiantDocumentsIdGet($identifiant, $authorization, $id)
+> \Hraph\PaygreenApi\Model\InlineResponse20010 apiIdentifiantDocumentsIdGet($identifiant, $authorization, $id)
 
 Obtenir un document
 
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ No authorization required
 
 ## apiIdentifiantDocumentsPost
 
-> \Hraph\PaygreenApi\Model\InlineResponse2006 apiIdentifiantDocumentsPost($identifiant, $authorization, $content_type)
+> \Hraph\PaygreenApi\Model\InlineResponse20010 apiIdentifiantDocumentsPost($identifiant, $authorization, $content_type)
 
 Envoyer des documents
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
 
 ### Authorization
 

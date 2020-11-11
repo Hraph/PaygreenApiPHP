@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## apiIdentifiantPayoutTransferGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse20013 apiIdentifiantPayoutTransferGet($identifiant, $authorization)
+> \Hraph\PaygreenApi\Model\InlineResponse20021 apiIdentifiantPayoutTransferGet($identifiant, $authorization)
 
 Liste des virements
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 
 ## apiIdentifiantPayoutTransferIdGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse20013 apiIdentifiantPayoutTransferIdGet($identifiant, $authorization, $id)
+> \Hraph\PaygreenApi\Model\InlineResponse20020 apiIdentifiantPayoutTransferIdGet($identifiant, $authorization, $id)
 
 Détails
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20020**](../Model/InlineResponse20020.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 ## apiIdentifiantPayoutTransferPost
 
-> \Hraph\PaygreenApi\Model\InlineResponse20013 apiIdentifiantPayoutTransferPost($identifiant, $authorization, $transfer)
+> \Hraph\PaygreenApi\Model\InlineResponse20020 apiIdentifiantPayoutTransferPost($identifiant, $authorization, $transfer)
 
 Créer un virement
 
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20020**](../Model/InlineResponse20020.md)
 
 ### Authorization
 

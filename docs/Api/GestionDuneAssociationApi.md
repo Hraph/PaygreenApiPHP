@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## apiIdentifiantSolidarityGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse20010 apiIdentifiantSolidarityGet($identifiant, $authorization)
+> \Hraph\PaygreenApi\Model\InlineResponse20015 apiIdentifiantSolidarityGet($identifiant, $authorization)
 
 Liste des associations
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20015**](../Model/InlineResponse20015.md)
 
 ### Authorization
 

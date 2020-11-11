@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## apiIdentifiantPayinsTransactionCancelPost
 
-> \Hraph\PaygreenApi\Model\InlineResponse2008 apiIdentifiantPayinsTransactionCancelPost($identifiant, $authorization, $id)
+> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionCancelPost($identifiant, $authorization, $id)
 
 Annulation
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ No authorization required
 
 ## apiIdentifiantPayinsTransactionCashPost
 
-> \Hraph\PaygreenApi\Model\InlineResponse2008 apiIdentifiantPayinsTransactionCashPost($identifiant, $authorization, $payins)
+> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionCashPost($identifiant, $authorization, $payins)
 
 Paiement comptant
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -138,7 +138,7 @@ No authorization required
 
 ## apiIdentifiantPayinsTransactionIdDelete
 
-> \Hraph\PaygreenApi\Model\InlineResponse2008 apiIdentifiantPayinsTransactionIdDelete($identifiant, $authorization, $id)
+> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionIdDelete($identifiant, $authorization, $id)
 
 Remboursement
 
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ No authorization required
 
 ## apiIdentifiantPayinsTransactionIdGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse2008 apiIdentifiantPayinsTransactionIdGet($identifiant, $authorization, $id)
+> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionIdGet($identifiant, $authorization, $id)
 
 Détails
 
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -258,7 +258,7 @@ No authorization required
 
 ## apiIdentifiantPayinsTransactionIdPatch
 
-> \Hraph\PaygreenApi\Model\InlineResponse2008 apiIdentifiantPayinsTransactionIdPatch($identifiant, $authorization, $id, $patch_amount)
+> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionIdPatch($identifiant, $authorization, $id, $patch_amount)
 
 Modification du montant
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -320,7 +320,7 @@ No authorization required
 
 ## apiIdentifiantPayinsTransactionIdPut
 
-> \Hraph\PaygreenApi\Model\InlineResponse2008 apiIdentifiantPayinsTransactionIdPut($identifiant, $authorization, $id, $execute_transaction)
+> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionIdPut($identifiant, $authorization, $id, $execute_transaction)
 
 Confirmer une transaction
 
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -382,7 +382,7 @@ No authorization required
 
 ## apiIdentifiantPayinsTransactionSubscriptionPost
 
-> \Hraph\PaygreenApi\Model\InlineResponse2008 apiIdentifiantPayinsTransactionSubscriptionPost($identifiant, $authorization, $payins_recc)
+> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionSubscriptionPost($identifiant, $authorization, $payins_recc)
 
 Paiement abonnement
 
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -442,7 +442,7 @@ No authorization required
 
 ## apiIdentifiantPayinsTransactionTokenizePost
 
-> \Hraph\PaygreenApi\Model\InlineResponse2008 apiIdentifiantPayinsTransactionTokenizePost($identifiant, $authorization, $payins)
+> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionTokenizePost($identifiant, $authorization, $payins)
 
 Paiement avec confirmation
 
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -502,7 +502,7 @@ No authorization required
 
 ## apiIdentifiantPayinsTransactionXtimePost
 
-> \Hraph\PaygreenApi\Model\InlineResponse2008 apiIdentifiantPayinsTransactionXtimePost($identifiant, $authorization, $payins_recc)
+> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionXtimePost($identifiant, $authorization, $payins_recc)
 
 Paiement en plusieurs fois
 
@@ -544,7 +544,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 

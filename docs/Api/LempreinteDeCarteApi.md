@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## apiIdentifiantPayinsCardprintGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse2009 apiIdentifiantPayinsCardprintGet($identifiant, $authorization)
+> \Hraph\PaygreenApi\Model\InlineResponse20013 apiIdentifiantPayinsCardprintGet($identifiant, $authorization)
 
 Liste des empreintes de carte
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 ## apiIdentifiantPayinsCardprintIdGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse2009 apiIdentifiantPayinsCardprintIdGet($identifiant, $authorization, $id)
+> \Hraph\PaygreenApi\Model\InlineResponse20014 apiIdentifiantPayinsCardprintIdGet($identifiant, $authorization, $id)
 
 Détails
 
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ No authorization required
 
 ## apiIdentifiantPayinsCardprintPost
 
-> \Hraph\PaygreenApi\Model\InlineResponse2009 apiIdentifiantPayinsCardprintPost($identifiant, $authorization, $card_print)
+> \Hraph\PaygreenApi\Model\InlineResponse20014 apiIdentifiantPayinsCardprintPost($identifiant, $authorization, $card_print)
 
 Création d'une empreinte de carte
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 

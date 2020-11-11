@@ -71,7 +71,7 @@ No authorization required
 
 ## apiIdentifiantSolidarityIdGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse20011 apiIdentifiantSolidarityIdGet($identifiant, $authorization, $id)
+> \Hraph\PaygreenApi\Model\InlineResponse20016 apiIdentifiantSolidarityIdGet($identifiant, $authorization, $id)
 
 Afficher un don
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ No authorization required
 
 ## apiIdentifiantSolidarityIdPatch
 
-> \Hraph\PaygreenApi\Model\InlineResponse20011 apiIdentifiantSolidarityIdPatch($identifiant, $authorization, $id, $solidarity)
+> \Hraph\PaygreenApi\Model\InlineResponse20016 apiIdentifiantSolidarityIdPatch($identifiant, $authorization, $id, $solidarity)
 
 Créer un don
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
 
 ### Authorization
 

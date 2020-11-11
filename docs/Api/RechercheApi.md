@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## apiIdentifiantPayinsSearchGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse2008 apiIdentifiantPayinsSearchGet($identifiant, $authorization)
+> \Hraph\PaygreenApi\Model\InlineResponse20017 apiIdentifiantPayinsSearchGet($identifiant, $authorization)
 
 Liste des transactions
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20017**](../Model/InlineResponse20017.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 
 ## apiIdentifiantPayinsSearchIdGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse2008 apiIdentifiantPayinsSearchIdGet($identifiant, $authorization, $id)
+> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsSearchIdGet($identifiant, $authorization, $id)
 
 Plus d'informations
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 

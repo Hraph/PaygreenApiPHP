@@ -125,7 +125,7 @@ class GestionDesPropritairesApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2005
+     * @return \Hraph\PaygreenApi\Model\InlineResponse2007
      */
     public function apiIdentifiantShareholderGet($identifiant, $authorization)
     {
@@ -143,7 +143,7 @@ class GestionDesPropritairesApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2007, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantShareholderGetWithHttpInfo($identifiant, $authorization)
     {
@@ -180,20 +180,20 @@ class GestionDesPropritairesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2005' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse2007' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2005', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2007', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2005';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2007';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -212,7 +212,7 @@ class GestionDesPropritairesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2005',
+                        '\Hraph\PaygreenApi\Model\InlineResponse2007',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -256,7 +256,7 @@ class GestionDesPropritairesApi
      */
     public function apiIdentifiantShareholderGetAsyncWithHttpInfo($identifiant, $authorization)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2005';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2007';
         $request = $this->apiIdentifiantShareholderGetRequest($identifiant, $authorization);
 
         return $this->client
@@ -414,7 +414,7 @@ class GestionDesPropritairesApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2005
+     * @return \Hraph\PaygreenApi\Model\InlineResponse2008
      */
     public function apiIdentifiantShareholderPost($identifiant, $authorization, $shareholder)
     {
@@ -433,7 +433,7 @@ class GestionDesPropritairesApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2008, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantShareholderPostWithHttpInfo($identifiant, $authorization, $shareholder)
     {
@@ -470,20 +470,20 @@ class GestionDesPropritairesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2005' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse2008' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2005', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2008', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2005';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2008';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -502,7 +502,7 @@ class GestionDesPropritairesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2005',
+                        '\Hraph\PaygreenApi\Model\InlineResponse2008',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -548,7 +548,7 @@ class GestionDesPropritairesApi
      */
     public function apiIdentifiantShareholderPostAsyncWithHttpInfo($identifiant, $authorization, $shareholder)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2005';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2008';
         $request = $this->apiIdentifiantShareholderPostRequest($identifiant, $authorization, $shareholder);
 
         return $this->client

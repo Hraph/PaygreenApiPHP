@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## apiIdentifiantShareholderGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse2005 apiIdentifiantShareholderGet($identifiant, $authorization)
+> \Hraph\PaygreenApi\Model\InlineResponse2007 apiIdentifiantShareholderGet($identifiant, $authorization)
 
 Liste des propriétaires
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 
 ## apiIdentifiantShareholderPost
 
-> \Hraph\PaygreenApi\Model\InlineResponse2005 apiIdentifiantShareholderPost($identifiant, $authorization, $shareholder)
+> \Hraph\PaygreenApi\Model\InlineResponse2008 apiIdentifiantShareholderPost($identifiant, $authorization, $shareholder)
 
 Créer un propriétaire
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
 
 ### Authorization
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## apiIdentifiantPayinsMultiCashPost
 
-> \Hraph\PaygreenApi\Model\InlineResponse2008 apiIdentifiantPayinsMultiCashPost($identifiant, $authorization, $payins_multi)
+> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsMultiCashPost($identifiant, $authorization, $payins_multi)
 
 Créer un paiement multidestinataires
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 

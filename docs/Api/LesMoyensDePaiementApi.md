@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## apiIdentifiantPaymenttypeGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse2007 apiIdentifiantPaymenttypeGet($identifiant, $authorization)
+> \Hraph\PaygreenApi\Model\InlineResponse20011 apiIdentifiantPaymenttypeGet($identifiant, $authorization)
 
 Liste des moyens de paiement
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
 
 ### Authorization
 

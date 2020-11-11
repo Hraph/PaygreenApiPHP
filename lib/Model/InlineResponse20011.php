@@ -60,7 +60,7 @@ class InlineResponse20011 implements ModelInterface, ArrayAccess
         'success' => 'bool',
         'message' => 'string',
         'code' => 'int',
-        'data' => '\Hraph\PaygreenApi\Model\Solidarity'
+        'data' => '\Hraph\PaygreenApi\Model\PartnerConfig[]'
     ];
 
     /**
@@ -297,7 +297,7 @@ class InlineResponse20011 implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Hraph\PaygreenApi\Model\Solidarity|null
+     * @return \Hraph\PaygreenApi\Model\PartnerConfig[]|null
      */
     public function getData()
     {
@@ -307,7 +307,7 @@ class InlineResponse20011 implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Hraph\PaygreenApi\Model\Solidarity|null $data data
+     * @param \Hraph\PaygreenApi\Model\PartnerConfig[]|null $data data
      *
      * @return $this
      */

@@ -126,7 +126,7 @@ class PaiementMultidestinataireApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2008
+     * @return \Hraph\PaygreenApi\Model\InlineResponse20012
      */
     public function apiIdentifiantPayinsMultiCashPost($identifiant, $authorization, $payins_multi)
     {
@@ -145,7 +145,7 @@ class PaiementMultidestinataireApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2008, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantPayinsMultiCashPostWithHttpInfo($identifiant, $authorization, $payins_multi)
     {
@@ -182,20 +182,20 @@ class PaiementMultidestinataireApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2008' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse20012' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2008', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20012', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2008';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20012';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -214,7 +214,7 @@ class PaiementMultidestinataireApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2008',
+                        '\Hraph\PaygreenApi\Model\InlineResponse20012',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -260,7 +260,7 @@ class PaiementMultidestinataireApi
      */
     public function apiIdentifiantPayinsMultiCashPostAsyncWithHttpInfo($identifiant, $authorization, $payins_multi)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2008';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20012';
         $request = $this->apiIdentifiantPayinsMultiCashPostRequest($identifiant, $authorization, $payins_multi);
 
         return $this->client

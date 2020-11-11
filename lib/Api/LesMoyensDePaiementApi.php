@@ -125,7 +125,7 @@ class LesMoyensDePaiementApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2007
+     * @return \Hraph\PaygreenApi\Model\InlineResponse20011
      */
     public function apiIdentifiantPaymenttypeGet($identifiant, $authorization)
     {
@@ -143,7 +143,7 @@ class LesMoyensDePaiementApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2007, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20011, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantPaymenttypeGetWithHttpInfo($identifiant, $authorization)
     {
@@ -180,20 +180,20 @@ class LesMoyensDePaiementApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2007' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse20011' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2007', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20011', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2007';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20011';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -212,7 +212,7 @@ class LesMoyensDePaiementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2007',
+                        '\Hraph\PaygreenApi\Model\InlineResponse20011',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -256,7 +256,7 @@ class LesMoyensDePaiementApi
      */
     public function apiIdentifiantPaymenttypeGetAsyncWithHttpInfo($identifiant, $authorization)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2007';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20011';
         $request = $this->apiIdentifiantPaymenttypeGetRequest($identifiant, $authorization);
 
         return $this->client

@@ -60,7 +60,7 @@ class InlineResponse20013 implements ModelInterface, ArrayAccess
         'success' => 'bool',
         'message' => 'string',
         'code' => 'int',
-        'data' => '\Hraph\PaygreenApi\Model\Transfer'
+        'data' => '\Hraph\PaygreenApi\Model\CardPrint[]'
     ];
 
     /**
@@ -297,7 +297,7 @@ class InlineResponse20013 implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Hraph\PaygreenApi\Model\Transfer|null
+     * @return \Hraph\PaygreenApi\Model\CardPrint[]|null
      */
     public function getData()
     {
@@ -307,7 +307,7 @@ class InlineResponse20013 implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Hraph\PaygreenApi\Model\Transfer|null $data data
+     * @param \Hraph\PaygreenApi\Model\CardPrint[]|null $data data
      *
      * @return $this
      */

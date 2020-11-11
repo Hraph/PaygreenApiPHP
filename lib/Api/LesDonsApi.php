@@ -385,7 +385,7 @@ class LesDonsApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse20011
+     * @return \Hraph\PaygreenApi\Model\InlineResponse20016
      */
     public function apiIdentifiantSolidarityIdGet($identifiant, $authorization, $id)
     {
@@ -404,7 +404,7 @@ class LesDonsApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20011, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20016, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantSolidarityIdGetWithHttpInfo($identifiant, $authorization, $id)
     {
@@ -441,20 +441,20 @@ class LesDonsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse20011' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse20016' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20011', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20016', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20011';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20016';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -473,7 +473,7 @@ class LesDonsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse20011',
+                        '\Hraph\PaygreenApi\Model\InlineResponse20016',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -519,7 +519,7 @@ class LesDonsApi
      */
     public function apiIdentifiantSolidarityIdGetAsyncWithHttpInfo($identifiant, $authorization, $id)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20011';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20016';
         $request = $this->apiIdentifiantSolidarityIdGetRequest($identifiant, $authorization, $id);
 
         return $this->client
@@ -693,7 +693,7 @@ class LesDonsApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse20011
+     * @return \Hraph\PaygreenApi\Model\InlineResponse20016
      */
     public function apiIdentifiantSolidarityIdPatch($identifiant, $authorization, $id, $solidarity)
     {
@@ -713,7 +713,7 @@ class LesDonsApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20011, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20016, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantSolidarityIdPatchWithHttpInfo($identifiant, $authorization, $id, $solidarity)
     {
@@ -750,20 +750,20 @@ class LesDonsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse20011' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse20016' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20011', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20016', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20011';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20016';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -782,7 +782,7 @@ class LesDonsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse20011',
+                        '\Hraph\PaygreenApi\Model\InlineResponse20016',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -830,7 +830,7 @@ class LesDonsApi
      */
     public function apiIdentifiantSolidarityIdPatchAsyncWithHttpInfo($identifiant, $authorization, $id, $solidarity)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20011';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20016';
         $request = $this->apiIdentifiantSolidarityIdPatchRequest($identifiant, $authorization, $id, $solidarity);
 
         return $this->client

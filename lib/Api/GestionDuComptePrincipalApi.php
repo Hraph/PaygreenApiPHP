@@ -125,7 +125,7 @@ class GestionDuComptePrincipalApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2003
+     * @return \Hraph\PaygreenApi\Model\InlineResponse2004
      */
     public function apiIdentifiantAccountGet($identifiant, $authorization)
     {
@@ -143,7 +143,7 @@ class GestionDuComptePrincipalApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantAccountGetWithHttpInfo($identifiant, $authorization)
     {
@@ -180,20 +180,20 @@ class GestionDuComptePrincipalApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2003' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse2004' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2003', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2004', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2003';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2004';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -212,7 +212,7 @@ class GestionDuComptePrincipalApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2003',
+                        '\Hraph\PaygreenApi\Model\InlineResponse2004',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -256,7 +256,7 @@ class GestionDuComptePrincipalApi
      */
     public function apiIdentifiantAccountGetAsyncWithHttpInfo($identifiant, $authorization)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2003';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2004';
         $request = $this->apiIdentifiantAccountGetRequest($identifiant, $authorization);
 
         return $this->client
@@ -414,7 +414,7 @@ class GestionDuComptePrincipalApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2003
+     * @return \Hraph\PaygreenApi\Model\InlineResponse2004
      */
     public function apiIdentifiantAccountPut($identifiant, $authorization, $account)
     {
@@ -433,7 +433,7 @@ class GestionDuComptePrincipalApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantAccountPutWithHttpInfo($identifiant, $authorization, $account)
     {
@@ -470,20 +470,20 @@ class GestionDuComptePrincipalApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2003' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse2004' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2003', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2004', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2003';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2004';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -502,7 +502,7 @@ class GestionDuComptePrincipalApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2003',
+                        '\Hraph\PaygreenApi\Model\InlineResponse2004',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -548,7 +548,7 @@ class GestionDuComptePrincipalApi
      */
     public function apiIdentifiantAccountPutAsyncWithHttpInfo($identifiant, $authorization, $account)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2003';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2004';
         $request = $this->apiIdentifiantAccountPutRequest($identifiant, $authorization, $account);
 
         return $this->client

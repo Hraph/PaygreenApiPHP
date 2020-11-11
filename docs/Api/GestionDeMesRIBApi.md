@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## apiIdentifiantBankGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantBankGet($identifiant, $authorization)
+> \Hraph\PaygreenApi\Model\InlineResponse20018 apiIdentifiantBankGet($identifiant, $authorization)
 
 Afficher mon RIB
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20018**](../Model/InlineResponse20018.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 
 ## apiIdentifiantBankPost
 
-> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantBankPost($identifiant, $authorization, $rib)
+> \Hraph\PaygreenApi\Model\InlineResponse20019 apiIdentifiantBankPost($identifiant, $authorization, $rib)
 
 Création d'un RIB
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
 
 ### Authorization
 

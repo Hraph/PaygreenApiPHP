@@ -125,7 +125,7 @@ class GestionDesDocumentsKYCsApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2006
+     * @return \Hraph\PaygreenApi\Model\InlineResponse2009
      */
     public function apiIdentifiantDocumentsGet($identifiant, $authorization)
     {
@@ -143,7 +143,7 @@ class GestionDesDocumentsKYCsApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantDocumentsGetWithHttpInfo($identifiant, $authorization)
     {
@@ -180,20 +180,20 @@ class GestionDesDocumentsKYCsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2006' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse2009' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2006', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2009', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2006';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2009';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -212,7 +212,7 @@ class GestionDesDocumentsKYCsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2006',
+                        '\Hraph\PaygreenApi\Model\InlineResponse2009',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -256,7 +256,7 @@ class GestionDesDocumentsKYCsApi
      */
     public function apiIdentifiantDocumentsGetAsyncWithHttpInfo($identifiant, $authorization)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2006';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2009';
         $request = $this->apiIdentifiantDocumentsGetRequest($identifiant, $authorization);
 
         return $this->client
@@ -673,7 +673,7 @@ class GestionDesDocumentsKYCsApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2006
+     * @return \Hraph\PaygreenApi\Model\InlineResponse20010
      */
     public function apiIdentifiantDocumentsIdGet($identifiant, $authorization, $id)
     {
@@ -692,7 +692,7 @@ class GestionDesDocumentsKYCsApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantDocumentsIdGetWithHttpInfo($identifiant, $authorization, $id)
     {
@@ -729,20 +729,20 @@ class GestionDesDocumentsKYCsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2006' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse20010' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2006', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20010', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2006';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20010';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -761,7 +761,7 @@ class GestionDesDocumentsKYCsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2006',
+                        '\Hraph\PaygreenApi\Model\InlineResponse20010',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -807,7 +807,7 @@ class GestionDesDocumentsKYCsApi
      */
     public function apiIdentifiantDocumentsIdGetAsyncWithHttpInfo($identifiant, $authorization, $id)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2006';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20010';
         $request = $this->apiIdentifiantDocumentsIdGetRequest($identifiant, $authorization, $id);
 
         return $this->client
@@ -980,7 +980,7 @@ class GestionDesDocumentsKYCsApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2006
+     * @return \Hraph\PaygreenApi\Model\InlineResponse20010
      */
     public function apiIdentifiantDocumentsPost($identifiant, $authorization, $content_type)
     {
@@ -999,7 +999,7 @@ class GestionDesDocumentsKYCsApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantDocumentsPostWithHttpInfo($identifiant, $authorization, $content_type)
     {
@@ -1036,20 +1036,20 @@ class GestionDesDocumentsKYCsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2006' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse20010' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2006', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20010', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2006';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20010';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1068,7 +1068,7 @@ class GestionDesDocumentsKYCsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2006',
+                        '\Hraph\PaygreenApi\Model\InlineResponse20010',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1114,7 +1114,7 @@ class GestionDesDocumentsKYCsApi
      */
     public function apiIdentifiantDocumentsPostAsyncWithHttpInfo($identifiant, $authorization, $content_type)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2006';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20010';
         $request = $this->apiIdentifiantDocumentsPostRequest($identifiant, $authorization, $content_type);
 
         return $this->client

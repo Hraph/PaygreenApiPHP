@@ -125,7 +125,7 @@ class GestionDeMesRIBApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse20012
+     * @return \Hraph\PaygreenApi\Model\InlineResponse20018
      */
     public function apiIdentifiantBankGet($identifiant, $authorization)
     {
@@ -143,7 +143,7 @@ class GestionDeMesRIBApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20018, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantBankGetWithHttpInfo($identifiant, $authorization)
     {
@@ -180,20 +180,20 @@ class GestionDeMesRIBApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse20012' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse20018' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20012', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20018', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20012';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20018';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -212,7 +212,7 @@ class GestionDeMesRIBApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse20012',
+                        '\Hraph\PaygreenApi\Model\InlineResponse20018',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -256,7 +256,7 @@ class GestionDeMesRIBApi
      */
     public function apiIdentifiantBankGetAsyncWithHttpInfo($identifiant, $authorization)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20012';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20018';
         $request = $this->apiIdentifiantBankGetRequest($identifiant, $authorization);
 
         return $this->client
@@ -414,7 +414,7 @@ class GestionDeMesRIBApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse20012
+     * @return \Hraph\PaygreenApi\Model\InlineResponse20019
      */
     public function apiIdentifiantBankPost($identifiant, $authorization, $rib)
     {
@@ -433,7 +433,7 @@ class GestionDeMesRIBApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantBankPostWithHttpInfo($identifiant, $authorization, $rib)
     {
@@ -470,20 +470,20 @@ class GestionDeMesRIBApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse20012' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse20019' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20012', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20019', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20012';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20019';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -502,7 +502,7 @@ class GestionDeMesRIBApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse20012',
+                        '\Hraph\PaygreenApi\Model\InlineResponse20019',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -548,7 +548,7 @@ class GestionDeMesRIBApi
      */
     public function apiIdentifiantBankPostAsyncWithHttpInfo($identifiant, $authorization, $rib)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20012';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20019';
         $request = $this->apiIdentifiantBankPostRequest($identifiant, $authorization, $rib);
 
         return $this->client

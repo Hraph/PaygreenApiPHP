@@ -125,7 +125,7 @@ class GestionDuneAssociationApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse20010
+     * @return \Hraph\PaygreenApi\Model\InlineResponse20015
      */
     public function apiIdentifiantSolidarityGet($identifiant, $authorization)
     {
@@ -143,7 +143,7 @@ class GestionDuneAssociationApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20015, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantSolidarityGetWithHttpInfo($identifiant, $authorization)
     {
@@ -180,20 +180,20 @@ class GestionDuneAssociationApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse20010' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse20015' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20010', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20015', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20010';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20015';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -212,7 +212,7 @@ class GestionDuneAssociationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse20010',
+                        '\Hraph\PaygreenApi\Model\InlineResponse20015',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -256,7 +256,7 @@ class GestionDuneAssociationApi
      */
     public function apiIdentifiantSolidarityGetAsyncWithHttpInfo($identifiant, $authorization)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20010';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20015';
         $request = $this->apiIdentifiantSolidarityGetRequest($identifiant, $authorization);
 
         return $this->client

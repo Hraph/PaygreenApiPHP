@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## apiIdentifiantShopsGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse2002 apiIdentifiantShopsGet($identifiant, $authorization)
+> \Hraph\PaygreenApi\Model\InlineResponse2003 apiIdentifiantShopsGet($identifiant, $authorization)
 
 Liste des boutiques
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 

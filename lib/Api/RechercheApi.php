@@ -125,7 +125,7 @@ class RechercheApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2008
+     * @return \Hraph\PaygreenApi\Model\InlineResponse20017
      */
     public function apiIdentifiantPayinsSearchGet($identifiant, $authorization)
     {
@@ -143,7 +143,7 @@ class RechercheApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2008, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20017, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantPayinsSearchGetWithHttpInfo($identifiant, $authorization)
     {
@@ -180,20 +180,20 @@ class RechercheApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2008' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse20017' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2008', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20017', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2008';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20017';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -212,7 +212,7 @@ class RechercheApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2008',
+                        '\Hraph\PaygreenApi\Model\InlineResponse20017',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -256,7 +256,7 @@ class RechercheApi
      */
     public function apiIdentifiantPayinsSearchGetAsyncWithHttpInfo($identifiant, $authorization)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2008';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20017';
         $request = $this->apiIdentifiantPayinsSearchGetRequest($identifiant, $authorization);
 
         return $this->client
@@ -414,7 +414,7 @@ class RechercheApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2008
+     * @return \Hraph\PaygreenApi\Model\InlineResponse20012
      */
     public function apiIdentifiantPayinsSearchIdGet($identifiant, $authorization, $id)
     {
@@ -433,7 +433,7 @@ class RechercheApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2008, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantPayinsSearchIdGetWithHttpInfo($identifiant, $authorization, $id)
     {
@@ -470,20 +470,20 @@ class RechercheApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2008' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse20012' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2008', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse20012', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2008';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20012';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -502,7 +502,7 @@ class RechercheApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2008',
+                        '\Hraph\PaygreenApi\Model\InlineResponse20012',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -548,7 +548,7 @@ class RechercheApi
      */
     public function apiIdentifiantPayinsSearchIdGetAsyncWithHttpInfo($identifiant, $authorization, $id)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2008';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse20012';
         $request = $this->apiIdentifiantPayinsSearchIdGetRequest($identifiant, $authorization, $id);
 
         return $this->client

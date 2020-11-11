@@ -125,7 +125,7 @@ class GestionDeLadresseApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2004
+     * @return \Hraph\PaygreenApi\Model\InlineResponse2005
      */
     public function apiIdentifiantAddressGet($identifiant, $authorization)
     {
@@ -143,7 +143,7 @@ class GestionDeLadresseApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantAddressGetWithHttpInfo($identifiant, $authorization)
     {
@@ -180,20 +180,20 @@ class GestionDeLadresseApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2004' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse2005' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2004', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2005', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2004';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2005';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -212,7 +212,7 @@ class GestionDeLadresseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2004',
+                        '\Hraph\PaygreenApi\Model\InlineResponse2005',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -256,7 +256,7 @@ class GestionDeLadresseApi
      */
     public function apiIdentifiantAddressGetAsyncWithHttpInfo($identifiant, $authorization)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2004';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2005';
         $request = $this->apiIdentifiantAddressGetRequest($identifiant, $authorization);
 
         return $this->client
@@ -414,7 +414,7 @@ class GestionDeLadresseApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Hraph\PaygreenApi\Model\InlineResponse2004
+     * @return \Hraph\PaygreenApi\Model\InlineResponse2006
      */
     public function apiIdentifiantAddressPost($identifiant, $authorization, $address)
     {
@@ -433,7 +433,7 @@ class GestionDeLadresseApi
      *
      * @throws \Hraph\PaygreenApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Hraph\PaygreenApi\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiIdentifiantAddressPostWithHttpInfo($identifiant, $authorization, $address)
     {
@@ -470,20 +470,20 @@ class GestionDeLadresseApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Hraph\PaygreenApi\Model\InlineResponse2004' === '\SplFileObject') {
+                    if ('\Hraph\PaygreenApi\Model\InlineResponse2006' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2004', []),
+                        ObjectSerializer::deserialize($content, '\Hraph\PaygreenApi\Model\InlineResponse2006', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2004';
+            $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2006';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -502,7 +502,7 @@ class GestionDeLadresseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Hraph\PaygreenApi\Model\InlineResponse2004',
+                        '\Hraph\PaygreenApi\Model\InlineResponse2006',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -548,7 +548,7 @@ class GestionDeLadresseApi
      */
     public function apiIdentifiantAddressPostAsyncWithHttpInfo($identifiant, $authorization, $address)
     {
-        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2004';
+        $returnType = '\Hraph\PaygreenApi\Model\InlineResponse2006';
         $request = $this->apiIdentifiantAddressPostRequest($identifiant, $authorization, $address);
 
         return $this->client

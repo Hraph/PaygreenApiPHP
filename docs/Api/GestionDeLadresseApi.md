@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## apiIdentifiantAddressGet
 
-> \Hraph\PaygreenApi\Model\InlineResponse2004 apiIdentifiantAddressGet($identifiant, $authorization)
+> \Hraph\PaygreenApi\Model\InlineResponse2005 apiIdentifiantAddressGet($identifiant, $authorization)
 
 Liste des adresses
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 
 ## apiIdentifiantAddressPost
 
-> \Hraph\PaygreenApi\Model\InlineResponse2004 apiIdentifiantAddressPost($identifiant, $authorization, $address)
+> \Hraph\PaygreenApi\Model\InlineResponse2006 apiIdentifiantAddressPost($identifiant, $authorization, $address)
 
 Créer une adresse
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Hraph\PaygreenApi\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\Hraph\PaygreenApi\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
 
 ### Authorization
 

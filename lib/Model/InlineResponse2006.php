@@ -60,7 +60,7 @@ class InlineResponse2006 implements ModelInterface, ArrayAccess
         'success' => 'bool',
         'message' => 'string',
         'code' => 'int',
-        'data' => '\Hraph\PaygreenApi\Model\Kyc'
+        'data' => '\Hraph\PaygreenApi\Model\Address'
     ];
 
     /**
@@ -297,7 +297,7 @@ class InlineResponse2006 implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Hraph\PaygreenApi\Model\Kyc|null
+     * @return \Hraph\PaygreenApi\Model\Address|null
      */
     public function getData()
     {
@@ -307,7 +307,7 @@ class InlineResponse2006 implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Hraph\PaygreenApi\Model\Kyc|null $data data
+     * @param \Hraph\PaygreenApi\Model\Address|null $data data
      *
      * @return $this
      */
