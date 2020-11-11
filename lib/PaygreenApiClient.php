@@ -118,7 +118,7 @@ class PaygreenApiClient implements PaygreenApiClientInterface
         $this->oAuthApi = new AuthentificationOAuthApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
         $this->addressApi = new GestionDeLadresseApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
         $this->bankApi = new GestionDeMesRIBApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
-        $this->shopApi = new GestionDeLadresseApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
+        $this->shopApi = new GestionDeLaBoutiqueApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
         $this->shopsApi = new GestionDeMesBoutiquesApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
         $this->documentsApi = new GestionDesDocumentsKYCsApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
         $this->shareHolderApi = new GestionDesPropritairesApi($this->httpClient, $this->config, $this->headerSelector, $host_index);
