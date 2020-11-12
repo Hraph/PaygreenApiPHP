@@ -3320,8 +3320,8 @@
           "readOnly": true
         },
         "extra": {
-          "type": "array",
-          "items": {
+          "type": "object",
+          "additionalProperties": {
             "type": "string"
           },
           "example": {

@@ -71,7 +71,7 @@ class Shop implements ModelInterface, ArrayAccess
         'paiement_type' => 'string',
         'with_vad' => '\Hraph\PaygreenApi\Model\ShopWithVad',
         'without_vad' => '\Hraph\PaygreenApi\Model\ShopWithVad',
-        'extra' => 'string[]'
+        'extra' => 'map[string,string]'
     ];
 
     /**
@@ -680,7 +680,7 @@ class Shop implements ModelInterface, ArrayAccess
     /**
      * Gets extra
      *
-     * @return string[]|null
+     * @return map[string,string]|null
      */
     public function getExtra()
     {
@@ -690,7 +690,7 @@ class Shop implements ModelInterface, ArrayAccess
     /**
      * Sets extra
      *
-     * @param string[]|null $extra extra
+     * @param map[string,string]|null $extra extra
      *
      * @return $this
      */

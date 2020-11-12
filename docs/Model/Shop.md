@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **paiement_type** | **string** |  | 
 **with_vad** | [**\Hraph\PaygreenApi\Model\ShopWithVad**](ShopWithVad.md) |  | [optional] 
 **without_vad** | [**\Hraph\PaygreenApi\Model\ShopWithVad**](ShopWithVad.md) |  | [optional] 
-**extra** | **string[]** |  | [optional] 
+**extra** | **map[string,string]** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
