@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **notified_url** | **string** | Adresse sur laquelle PayGreen peut faire des appels pour mettre à jour le statut. | [optional] 
 **id_fingerprint** | **int** |  | [optional] 
 **buyer** | [**\Hraph\PaygreenApi\Model\PayinsBuyer**](PayinsBuyer.md) |  | [optional] 
+**billing_address** | [**\Hraph\PaygreenApi\Model\PayinsBillingAddress**](PayinsBillingAddress.md) |  | [optional] 
 **metadata** | **string[]** |  | [optional] 
 **eligible_amount** | **string[]** |  | [optional] 
 **card** | [**\Hraph\PaygreenApi\Model\PayinsCard**](PayinsCard.md) |  | [optional] 

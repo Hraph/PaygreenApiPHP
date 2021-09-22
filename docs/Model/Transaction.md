@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **result** | [**\Hraph\PaygreenApi\Model\TransactionResult**](TransactionResult.md) |  | [optional] 
 **card** | [**\Hraph\PaygreenApi\Model\TransactionCard**](TransactionCard.md) |  | [optional] 
 **buyer** | [**\Hraph\PaygreenApi\Model\TransactionBuyer**](TransactionBuyer.md) |  | [optional] 
+**billing_address** | [**\Hraph\PaygreenApi\Model\TransactionBillingAddress**](TransactionBillingAddress.md) |  | [optional] 
 **schedules** | [**\Hraph\PaygreenApi\Model\TransactionSchedules**](TransactionSchedules.md) |  | [optional] 
 **donation** | [**\Hraph\PaygreenApi\Model\TransactionDonation**](TransactionDonation.md) |  | [optional] 
 **metadata** | **string[]** |  | [optional] 
