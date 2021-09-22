@@ -65,6 +65,7 @@ class PayinsRecc implements ModelInterface, ArrayAccess
         'notified_url' => 'string',
         'id_fingerprint' => 'int',
         'buyer' => '\Hraph\PaygreenApi\Model\PayinsBuyer',
+        'billing_address' => '\Hraph\PaygreenApi\Model\PayinsBillingAddress',
         'order_details' => '\Hraph\PaygreenApi\Model\PayinsReccOrderDetails',
         'card' => '\Hraph\PaygreenApi\Model\PayinsCard',
         'metadata' => 'string[]',
@@ -89,6 +90,7 @@ class PayinsRecc implements ModelInterface, ArrayAccess
         'notified_url' => null,
         'id_fingerprint' => 'int64',
         'buyer' => null,
+        'billing_address' => null,
         'order_details' => null,
         'card' => null,
         'metadata' => null,
@@ -134,6 +136,7 @@ class PayinsRecc implements ModelInterface, ArrayAccess
         'notified_url' => 'notified_url',
         'id_fingerprint' => 'idFingerprint',
         'buyer' => 'buyer',
+        'billing_address' => 'billing_address',
         'order_details' => 'orderDetails',
         'card' => 'card',
         'metadata' => 'metadata',
@@ -158,6 +161,7 @@ class PayinsRecc implements ModelInterface, ArrayAccess
         'notified_url' => 'setNotifiedUrl',
         'id_fingerprint' => 'setIdFingerprint',
         'buyer' => 'setBuyer',
+        'billing_address' => 'setBillingAddress',
         'order_details' => 'setOrderDetails',
         'card' => 'setCard',
         'metadata' => 'setMetadata',
@@ -182,6 +186,7 @@ class PayinsRecc implements ModelInterface, ArrayAccess
         'notified_url' => 'getNotifiedUrl',
         'id_fingerprint' => 'getIdFingerprint',
         'buyer' => 'getBuyer',
+        'billing_address' => 'getBillingAddress',
         'order_details' => 'getOrderDetails',
         'card' => 'getCard',
         'metadata' => 'getMetadata',
@@ -233,9 +238,9 @@ class PayinsRecc implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -260,6 +265,7 @@ class PayinsRecc implements ModelInterface, ArrayAccess
         $this->container['notified_url'] = isset($data['notified_url']) ? $data['notified_url'] : null;
         $this->container['id_fingerprint'] = isset($data['id_fingerprint']) ? $data['id_fingerprint'] : null;
         $this->container['buyer'] = isset($data['buyer']) ? $data['buyer'] : null;
+        $this->container['billing_address'] = isset($data['billing_address']) ? $data['billing_address'] : null;
         $this->container['order_details'] = isset($data['order_details']) ? $data['order_details'] : null;
         $this->container['card'] = isset($data['card']) ? $data['card'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
@@ -491,6 +497,30 @@ class PayinsRecc implements ModelInterface, ArrayAccess
     public function setBuyer($buyer)
     {
         $this->container['buyer'] = $buyer;
+
+        return $this;
+    }
+
+    /**
+     * Gets billing_address
+     *
+     * @return \Hraph\PaygreenApi\Model\PayinsBillingAddress|null
+     */
+    public function getBillingAddress()
+    {
+        return $this->container['billing_address'];
+    }
+
+    /**
+     * Sets billing_address
+     *
+     * @param \Hraph\PaygreenApi\Model\PayinsBillingAddress|null $billingAddress billing_address
+     *
+     * @return $this
+     */
+    public function setBillingAddress($billingAddress)
+    {
+        $this->container['billing_address'] = $billingAddress;
 
         return $this;
     }
