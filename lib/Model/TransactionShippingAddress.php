@@ -1,6 +1,6 @@
 <?php
 /**
- * CardPrint
+ * TransactionShippingAddress
  *
  * PHP version 7.3
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Hraph\PaygreenApi\ObjectSerializer;
 
 /**
- * CardPrint Class Doc Comment
+ * TransactionShippingAddress Class Doc Comment
  *
  * @category Class
  * @package  Hraph\PaygreenApi
@@ -43,7 +43,7 @@ use \Hraph\PaygreenApi\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class CardPrint implements ModelInterface, ArrayAccess, \JsonSerializable
+class TransactionShippingAddress implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class CardPrint implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'CardPrint';
+    protected static $openAPIModelName = 'Transaction_shippingAddress';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,24 +60,15 @@ class CardPrint implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
-        'order_id' => 'string',
-        'payment_type' => 'string',
-        'returned_url' => 'string',
-        'notified_url' => 'string',
-        'url' => 'string',
-        'test_mode' => 'int',
-        'result' => '\Hraph\PaygreenApi\Model\TransactionResult',
-        'card' => '\Hraph\PaygreenApi\Model\TransactionCard',
-        'buyer' => '\Hraph\PaygreenApi\Model\PayinsBuyer',
-        'shipping_address' => '\Hraph\PaygreenApi\Model\PayinsShippingAddress',
-        'billing_address' => '\Hraph\PaygreenApi\Model\PayinsShippingAddress',
-        'metadata' => 'string[]',
-        'explanation' => 'string',
-        'created_at' => '\DateTime',
-        'value_at' => '\DateTime',
-        'answered_at' => '\DateTime',
-        'ttl' => 'string'
+        'last_name' => 'string',
+        'first_name' => 'string',
+        'address' => 'string',
+        'address2' => 'string',
+        'company' => 'string',
+        'zip_code' => 'string',
+        'city' => 'string',
+        'country' => 'string',
+        'type' => 'string'
     ];
 
     /**
@@ -88,24 +79,15 @@ class CardPrint implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'order_id' => null,
-        'payment_type' => null,
-        'returned_url' => null,
-        'notified_url' => null,
-        'url' => null,
-        'test_mode' => 'int64',
-        'result' => null,
-        'card' => null,
-        'buyer' => null,
-        'shipping_address' => null,
-        'billing_address' => null,
-        'metadata' => null,
-        'explanation' => null,
-        'created_at' => 'date-time',
-        'value_at' => 'date-time',
-        'answered_at' => 'date-time',
-        'ttl' => null
+        'last_name' => null,
+        'first_name' => null,
+        'address' => null,
+        'address2' => null,
+        'company' => null,
+        'zip_code' => null,
+        'city' => null,
+        'country' => null,
+        'type' => null
     ];
 
     /**
@@ -135,24 +117,15 @@ class CardPrint implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'order_id' => 'orderId',
-        'payment_type' => 'paymentType',
-        'returned_url' => 'returned_url',
-        'notified_url' => 'notified_url',
-        'url' => 'url',
-        'test_mode' => 'testMode',
-        'result' => 'result',
-        'card' => 'card',
-        'buyer' => 'buyer',
-        'shipping_address' => 'shippingAddress',
-        'billing_address' => 'billingAddress',
-        'metadata' => 'metadata',
-        'explanation' => 'explanation',
-        'created_at' => 'createdAt',
-        'value_at' => 'valueAt',
-        'answered_at' => 'answeredAt',
-        'ttl' => 'ttl'
+        'last_name' => 'lastName',
+        'first_name' => 'firstName',
+        'address' => 'address',
+        'address2' => 'address2',
+        'company' => 'company',
+        'zip_code' => 'zipCode',
+        'city' => 'city',
+        'country' => 'country',
+        'type' => 'type'
     ];
 
     /**
@@ -161,24 +134,15 @@ class CardPrint implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'order_id' => 'setOrderId',
-        'payment_type' => 'setPaymentType',
-        'returned_url' => 'setReturnedUrl',
-        'notified_url' => 'setNotifiedUrl',
-        'url' => 'setUrl',
-        'test_mode' => 'setTestMode',
-        'result' => 'setResult',
-        'card' => 'setCard',
-        'buyer' => 'setBuyer',
-        'shipping_address' => 'setShippingAddress',
-        'billing_address' => 'setBillingAddress',
-        'metadata' => 'setMetadata',
-        'explanation' => 'setExplanation',
-        'created_at' => 'setCreatedAt',
-        'value_at' => 'setValueAt',
-        'answered_at' => 'setAnsweredAt',
-        'ttl' => 'setTtl'
+        'last_name' => 'setLastName',
+        'first_name' => 'setFirstName',
+        'address' => 'setAddress',
+        'address2' => 'setAddress2',
+        'company' => 'setCompany',
+        'zip_code' => 'setZipCode',
+        'city' => 'setCity',
+        'country' => 'setCountry',
+        'type' => 'setType'
     ];
 
     /**
@@ -187,24 +151,15 @@ class CardPrint implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'order_id' => 'getOrderId',
-        'payment_type' => 'getPaymentType',
-        'returned_url' => 'getReturnedUrl',
-        'notified_url' => 'getNotifiedUrl',
-        'url' => 'getUrl',
-        'test_mode' => 'getTestMode',
-        'result' => 'getResult',
-        'card' => 'getCard',
-        'buyer' => 'getBuyer',
-        'shipping_address' => 'getShippingAddress',
-        'billing_address' => 'getBillingAddress',
-        'metadata' => 'getMetadata',
-        'explanation' => 'getExplanation',
-        'created_at' => 'getCreatedAt',
-        'value_at' => 'getValueAt',
-        'answered_at' => 'getAnsweredAt',
-        'ttl' => 'getTtl'
+        'last_name' => 'getLastName',
+        'first_name' => 'getFirstName',
+        'address' => 'getAddress',
+        'address2' => 'getAddress2',
+        'company' => 'getCompany',
+        'zip_code' => 'getZipCode',
+        'city' => 'getCity',
+        'country' => 'getCountry',
+        'type' => 'getType'
     ];
 
     /**
@@ -264,24 +219,15 @@ class CardPrint implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = $data['id'] ?? null;
-        $this->container['order_id'] = $data['order_id'] ?? null;
-        $this->container['payment_type'] = $data['payment_type'] ?? null;
-        $this->container['returned_url'] = $data['returned_url'] ?? null;
-        $this->container['notified_url'] = $data['notified_url'] ?? null;
-        $this->container['url'] = $data['url'] ?? null;
-        $this->container['test_mode'] = $data['test_mode'] ?? null;
-        $this->container['result'] = $data['result'] ?? null;
-        $this->container['card'] = $data['card'] ?? null;
-        $this->container['buyer'] = $data['buyer'] ?? null;
-        $this->container['shipping_address'] = $data['shipping_address'] ?? null;
-        $this->container['billing_address'] = $data['billing_address'] ?? null;
-        $this->container['metadata'] = $data['metadata'] ?? null;
-        $this->container['explanation'] = $data['explanation'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
-        $this->container['value_at'] = $data['value_at'] ?? null;
-        $this->container['answered_at'] = $data['answered_at'] ?? null;
-        $this->container['ttl'] = $data['ttl'] ?? null;
+        $this->container['last_name'] = $data['last_name'] ?? null;
+        $this->container['first_name'] = $data['first_name'] ?? null;
+        $this->container['address'] = $data['address'] ?? null;
+        $this->container['address2'] = $data['address2'] ?? null;
+        $this->container['company'] = $data['company'] ?? null;
+        $this->container['zip_code'] = $data['zip_code'] ?? null;
+        $this->container['city'] = $data['city'] ?? null;
+        $this->container['country'] = $data['country'] ?? null;
+        $this->container['type'] = $data['type'] ?? null;
     }
 
     /**
@@ -293,9 +239,6 @@ class CardPrint implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['order_id'] === null) {
-            $invalidProperties[] = "'order_id' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -312,433 +255,217 @@ class CardPrint implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets id
+     * Gets last_name
      *
      * @return string|null
      */
-    public function getId()
+    public function getLastName()
     {
-        return $this->container['id'];
+        return $this->container['last_name'];
     }
 
     /**
-     * Sets id
+     * Sets last_name
      *
-     * @param string|null $id id
+     * @param string|null $last_name last_name
      *
      * @return self
      */
-    public function setId($id)
+    public function setLastName($last_name)
     {
-        $this->container['id'] = $id;
+        $this->container['last_name'] = $last_name;
 
         return $this;
     }
 
     /**
-     * Gets order_id
-     *
-     * @return string
-     */
-    public function getOrderId()
-    {
-        return $this->container['order_id'];
-    }
-
-    /**
-     * Sets order_id
-     *
-     * @param string $order_id Il s'agit du token lié à votre empreinte de carte.
-     *
-     * @return self
-     */
-    public function setOrderId($order_id)
-    {
-        $this->container['order_id'] = $order_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets payment_type
+     * Gets first_name
      *
      * @return string|null
      */
-    public function getPaymentType()
+    public function getFirstName()
     {
-        return $this->container['payment_type'];
+        return $this->container['first_name'];
     }
 
     /**
-     * Sets payment_type
+     * Sets first_name
      *
-     * @param string|null $payment_type payment_type
+     * @param string|null $first_name first_name
      *
      * @return self
      */
-    public function setPaymentType($payment_type)
+    public function setFirstName($first_name)
     {
-        $this->container['payment_type'] = $payment_type;
+        $this->container['first_name'] = $first_name;
 
         return $this;
     }
 
     /**
-     * Gets returned_url
+     * Gets address
      *
      * @return string|null
      */
-    public function getReturnedUrl()
+    public function getAddress()
     {
-        return $this->container['returned_url'];
+        return $this->container['address'];
     }
 
     /**
-     * Sets returned_url
+     * Sets address
      *
-     * @param string|null $returned_url Adresse sur laquelle il faut rediriger le client après que l'action a été effectuée.
+     * @param string|null $address address
      *
      * @return self
      */
-    public function setReturnedUrl($returned_url)
+    public function setAddress($address)
     {
-        $this->container['returned_url'] = $returned_url;
+        $this->container['address'] = $address;
 
         return $this;
     }
 
     /**
-     * Gets notified_url
+     * Gets address2
      *
      * @return string|null
      */
-    public function getNotifiedUrl()
+    public function getAddress2()
     {
-        return $this->container['notified_url'];
+        return $this->container['address2'];
     }
 
     /**
-     * Sets notified_url
+     * Sets address2
      *
-     * @param string|null $notified_url Adresse sur laquelle PayGreen peut faire des appels pour mettre à jour le statut.
+     * @param string|null $address2 address2
      *
      * @return self
      */
-    public function setNotifiedUrl($notified_url)
+    public function setAddress2($address2)
     {
-        $this->container['notified_url'] = $notified_url;
+        $this->container['address2'] = $address2;
 
         return $this;
     }
 
     /**
-     * Gets url
+     * Gets company
      *
      * @return string|null
      */
-    public function getUrl()
+    public function getCompany()
     {
-        return $this->container['url'];
+        return $this->container['company'];
     }
 
     /**
-     * Sets url
+     * Sets company
      *
-     * @param string|null $url url
+     * @param string|null $company company
      *
      * @return self
      */
-    public function setUrl($url)
+    public function setCompany($company)
     {
-        $this->container['url'] = $url;
+        $this->container['company'] = $company;
 
         return $this;
     }
 
     /**
-     * Gets test_mode
-     *
-     * @return int|null
-     */
-    public function getTestMode()
-    {
-        return $this->container['test_mode'];
-    }
-
-    /**
-     * Sets test_mode
-     *
-     * @param int|null $test_mode test_mode
-     *
-     * @return self
-     */
-    public function setTestMode($test_mode)
-    {
-        $this->container['test_mode'] = $test_mode;
-
-        return $this;
-    }
-
-    /**
-     * Gets result
-     *
-     * @return \Hraph\PaygreenApi\Model\TransactionResult|null
-     */
-    public function getResult()
-    {
-        return $this->container['result'];
-    }
-
-    /**
-     * Sets result
-     *
-     * @param \Hraph\PaygreenApi\Model\TransactionResult|null $result result
-     *
-     * @return self
-     */
-    public function setResult($result)
-    {
-        $this->container['result'] = $result;
-
-        return $this;
-    }
-
-    /**
-     * Gets card
-     *
-     * @return \Hraph\PaygreenApi\Model\TransactionCard|null
-     */
-    public function getCard()
-    {
-        return $this->container['card'];
-    }
-
-    /**
-     * Sets card
-     *
-     * @param \Hraph\PaygreenApi\Model\TransactionCard|null $card card
-     *
-     * @return self
-     */
-    public function setCard($card)
-    {
-        $this->container['card'] = $card;
-
-        return $this;
-    }
-
-    /**
-     * Gets buyer
-     *
-     * @return \Hraph\PaygreenApi\Model\PayinsBuyer|null
-     */
-    public function getBuyer()
-    {
-        return $this->container['buyer'];
-    }
-
-    /**
-     * Sets buyer
-     *
-     * @param \Hraph\PaygreenApi\Model\PayinsBuyer|null $buyer buyer
-     *
-     * @return self
-     */
-    public function setBuyer($buyer)
-    {
-        $this->container['buyer'] = $buyer;
-
-        return $this;
-    }
-
-    /**
-     * Gets shipping_address
-     *
-     * @return \Hraph\PaygreenApi\Model\PayinsShippingAddress|null
-     */
-    public function getShippingAddress()
-    {
-        return $this->container['shipping_address'];
-    }
-
-    /**
-     * Sets shipping_address
-     *
-     * @param \Hraph\PaygreenApi\Model\PayinsShippingAddress|null $shipping_address shipping_address
-     *
-     * @return self
-     */
-    public function setShippingAddress($shipping_address)
-    {
-        $this->container['shipping_address'] = $shipping_address;
-
-        return $this;
-    }
-
-    /**
-     * Gets billing_address
-     *
-     * @return \Hraph\PaygreenApi\Model\PayinsShippingAddress|null
-     */
-    public function getBillingAddress()
-    {
-        return $this->container['billing_address'];
-    }
-
-    /**
-     * Sets billing_address
-     *
-     * @param \Hraph\PaygreenApi\Model\PayinsShippingAddress|null $billing_address billing_address
-     *
-     * @return self
-     */
-    public function setBillingAddress($billing_address)
-    {
-        $this->container['billing_address'] = $billing_address;
-
-        return $this;
-    }
-
-    /**
-     * Gets metadata
-     *
-     * @return string[]|null
-     */
-    public function getMetadata()
-    {
-        return $this->container['metadata'];
-    }
-
-    /**
-     * Sets metadata
-     *
-     * @param string[]|null $metadata metadata
-     *
-     * @return self
-     */
-    public function setMetadata($metadata)
-    {
-        $this->container['metadata'] = $metadata;
-
-        return $this;
-    }
-
-    /**
-     * Gets explanation
+     * Gets zip_code
      *
      * @return string|null
      */
-    public function getExplanation()
+    public function getZipCode()
     {
-        return $this->container['explanation'];
+        return $this->container['zip_code'];
     }
 
     /**
-     * Sets explanation
+     * Sets zip_code
      *
-     * @param string|null $explanation explanation
+     * @param string|null $zip_code zip_code
      *
      * @return self
      */
-    public function setExplanation($explanation)
+    public function setZipCode($zip_code)
     {
-        $this->container['explanation'] = $explanation;
+        $this->container['zip_code'] = $zip_code;
 
         return $this;
     }
 
     /**
-     * Gets created_at
-     *
-     * @return \DateTime|null
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     *
-     * @param \DateTime|null $created_at created_at
-     *
-     * @return self
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets value_at
-     *
-     * @return \DateTime|null
-     */
-    public function getValueAt()
-    {
-        return $this->container['value_at'];
-    }
-
-    /**
-     * Sets value_at
-     *
-     * @param \DateTime|null $value_at value_at
-     *
-     * @return self
-     */
-    public function setValueAt($value_at)
-    {
-        $this->container['value_at'] = $value_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets answered_at
-     *
-     * @return \DateTime|null
-     */
-    public function getAnsweredAt()
-    {
-        return $this->container['answered_at'];
-    }
-
-    /**
-     * Sets answered_at
-     *
-     * @param \DateTime|null $answered_at answered_at
-     *
-     * @return self
-     */
-    public function setAnsweredAt($answered_at)
-    {
-        $this->container['answered_at'] = $answered_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets ttl
+     * Gets city
      *
      * @return string|null
      */
-    public function getTtl()
+    public function getCity()
     {
-        return $this->container['ttl'];
+        return $this->container['city'];
     }
 
     /**
-     * Sets ttl
+     * Sets city
      *
-     * @param string|null $ttl ttl
+     * @param string|null $city city
      *
      * @return self
      */
-    public function setTtl($ttl)
+    public function setCity($city)
     {
-        $this->container['ttl'] = $ttl;
+        $this->container['city'] = $city;
+
+        return $this;
+    }
+
+    /**
+     * Gets country
+     *
+     * @return string|null
+     */
+    public function getCountry()
+    {
+        return $this->container['country'];
+    }
+
+    /**
+     * Sets country
+     *
+     * @param string|null $country country
+     *
+     * @return self
+     */
+    public function setCountry($country)
+    {
+        $this->container['country'] = $country;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string|null $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
 
         return $this;
     }

@@ -54,6 +54,7 @@ docs/Model/PayinsCard.md
 docs/Model/PayinsMulti.md
 docs/Model/PayinsRecc.md
 docs/Model/PayinsReccOrderDetails.md
+docs/Model/PayinsShippingAddress.md
 docs/Model/Rib.md
 docs/Model/Shareholder.md
 docs/Model/Shop.md
@@ -61,11 +62,13 @@ docs/Model/ShopPatch.md
 docs/Model/ShopWithVad.md
 docs/Model/Solidarity.md
 docs/Model/Transaction.md
+docs/Model/TransactionBillingAddress.md
 docs/Model/TransactionBuyer.md
 docs/Model/TransactionCard.md
 docs/Model/TransactionDonation.md
 docs/Model/TransactionResult.md
 docs/Model/TransactionSchedules.md
+docs/Model/TransactionShippingAddress.md
 docs/Model/Transfer.md
 lib/Api/AuthentificationOAuthApi.php
 lib/Api/GestionDeLaBoutiqueApi.php
@@ -124,6 +127,7 @@ lib/Model/PayinsCard.php
 lib/Model/PayinsMulti.php
 lib/Model/PayinsRecc.php
 lib/Model/PayinsReccOrderDetails.php
+lib/Model/PayinsShippingAddress.php
 lib/Model/Rib.php
 lib/Model/Shareholder.php
 lib/Model/Shop.php
@@ -131,11 +135,16 @@ lib/Model/ShopPatch.php
 lib/Model/ShopWithVad.php
 lib/Model/Solidarity.php
 lib/Model/Transaction.php
+lib/Model/TransactionBillingAddress.php
 lib/Model/TransactionBuyer.php
 lib/Model/TransactionCard.php
 lib/Model/TransactionDonation.php
 lib/Model/TransactionResult.php
 lib/Model/TransactionSchedules.php
+lib/Model/TransactionShippingAddress.php
 lib/Model/Transfer.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Model/PayinsShippingAddressTest.php
+test/Model/TransactionBillingAddressTest.php
+test/Model/TransactionShippingAddressTest.php

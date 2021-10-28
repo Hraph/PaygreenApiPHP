@@ -59,11 +59,11 @@
     },
     {
       "name": "Les dons",
-      "description": "Créez, gérez et supprimer les dons effectués par les consommateurs lors de leur achat, dans le cadre de nos options solidaires&nbsp;: l'**Arrondi** et **Tree** (compensation carbone)."
+      "description": "Créez, gérez et supprimer les dons effectués par les consommateurs lors de leur achat, dans le cadre de nos options solidaires : l'**Arrondi** et **Tree** (compensation carbone)."
     },
     {
-      "name": "Recherche",
-      "description": "Effectuez les recherches sur une transaction"
+      "name": "Recherche de transaction",
+      "description": "Effectuez les recherches sur une ou plusieurs transaction"
     },
     {
       "name": "Gestion de mes RIB",
@@ -2111,7 +2111,7 @@
           "L'empreinte de carte"
         ],
         "summary": "Création d'une empreinte de carte",
-        "description": "La création de l'empreinte de carte se traduit pour le consommateur par l'affichage d'une interface de paiement PayGreen, dans laquelle il va renseigner ses informations de carte. Le consommateur **n'est pas débité** lors de l'empreinte.<br />\n<br />\nDans le cas d'une empreinte de carte de type `SEPA`, l'interface PayGreen demande des informations sur le consommateur (nom, prénom, date de naissance, mail) ainsi qu'un Iban valide. Une fois ces données confirmées, le consommateur est redirigé chez notre partenaire bancaire pour signer son mandat.<br />\n<br />\nPour obtenir cette interface, vous devez envoyer une requête contenant notamment l'identifiant de la commande (`orderId`) et les informations sur l'acheteur (nom, prénom&hellip; dans le `buyer`). <br />\n<br />\nLe client peut ensuite renseigner ses informations de carte bancaire et valider.<br />\n<br />\nUne fois l'empreinte de carte effectuée, vous recevez une réponse contenant notamment un `id` (dans le `data`). Vous pourrez alors renseigner cet `id` dans le paramètre `token` de l'objet `card` lors de la création d'un **paiement comptant** ou **paiement par abonnement** ou **paiement en plusieurs fois**.",
+        "description": "La création de l'empreinte de carte se traduit pour le consommateur par l'affichage d'une interface de paiement PayGreen, dans laquelle il va renseigner ses informations de carte. Le consommateur **n'est pas débité** lors de l'empreinte.<br />\n<br />\nDans le cas d'une empreinte de carte de type `SEPA`, l'interface PayGreen demande des informations sur le consommateur (nom, prénom, date de naissance, mail) ainsi qu'un Iban valide. Une fois ces données confirmées, le consommateur est redirigé chez notre partenaire bancaire pour signer son mandat.<br />\n<br />\nPour obtenir cette interface, vous devez envoyer une requête contenant notamment l'identifiant de la commande (`orderId`) et les informations sur l'acheteur (nom, prénom&hellip; dans le `buyer`). <br />\n<br />\nLe client peut ensuite renseigner ses informations de carte bancaire et valider.<br />\n<br />\nDans le cas du TRD Conecs, lors de l'utilisation d'une empreinte de carte, si le montant disponible sur la carte est inférieur au montant demandé, une transaction avec le montant disponible sera créé. Par exemple, si vous demandez 19€ mais que la carte n`a que 10€ de disponible, notre API vous retournera un paiement validé avec un `amount` à 1000 et un `originalAmount` à 1900. C'est à vous de gérer le complément si besoin.<br />\n<br />\nUne fois l'empreinte de carte effectuée, vous recevez une réponse contenant notamment un `id` (dans le `data`). Vous pourrez alors renseigner cet `id` dans le paramètre `token` de l'objet `card` lors de la création d'un **paiement comptant** ou **paiement par abonnement** ou **paiement en plusieurs fois**.",
         "consumes": [
           "application/json"
         ],
@@ -3566,6 +3566,12 @@
           "readOnly": true,
           "description": "Le montant est en centimes."
         },
+        "originalAmount": {
+          "type": "integer",
+          "format": "int64",
+          "example": 9900,
+          "readOnly": true
+        },
         "currency": {
           "type": "string",
           "example": "EUR",
@@ -3675,6 +3681,103 @@
               "example": "PayGreen"
             }
           }
+        },
+        "shippingAddress": {
+          "type": "object",
+          "properties": {
+            "lastName": {
+              "type": "string",
+              "readOnly": true,
+              "example": "Last Name"
+            },
+            "firstName": {
+              "type": "string",
+              "readOnly": true,
+              "example": "First Name"
+            },
+            "address": {
+              "type": "string",
+              "readOnly": true,
+              "example": "Place Saint Marc"
+            },
+            "address2": {
+              "type": "string",
+              "readOnly": true,
+              "example": "Building's name"
+            },
+            "company": {
+              "type": "string",
+              "readOnly": true,
+              "example": "Company name"
+            },
+            "zipCode": {
+              "type": "string",
+              "readOnly": true,
+              "example": "30124"
+            },
+            "city": {
+              "type": "string",
+              "readOnly": true,
+              "example": "Venise"
+            },
+            "country": {
+              "type": "string",
+              "readOnly": true,
+              "example": "ITA"
+            },
+            "type": {
+              "type": "string",
+              "readOnly": true,
+              "example": "NEW"
+            }
+          },
+          "readOnly": true
+        },
+        "billingAddress": {
+          "type": "object",
+          "properties": {
+            "lastName": {
+              "type": "string",
+              "readOnly": true,
+              "example": "Last Name"
+            },
+            "firstName": {
+              "type": "string",
+              "readOnly": true,
+              "example": "First Name"
+            },
+            "address": {
+              "type": "string",
+              "readOnly": true,
+              "example": "Place Saint Marc"
+            },
+            "address2": {
+              "type": "string",
+              "readOnly": true,
+              "example": "Building's name"
+            },
+            "company": {
+              "type": "string",
+              "readOnly": true,
+              "example": "Company name"
+            },
+            "zipCode": {
+              "type": "string",
+              "readOnly": true,
+              "example": "30124"
+            },
+            "city": {
+              "type": "string",
+              "readOnly": true,
+              "example": "Venise"
+            },
+            "country": {
+              "type": "string",
+              "readOnly": true,
+              "example": "ITA"
+            }
+          },
+          "readOnly": true
         },
         "schedules": {
           "type": "object",
@@ -3804,6 +3907,12 @@
       },
       "required": [
         "paymentType",
+        "lastName",
+        "firstName",
+        "address",
+        "zipCode",
+        "city",
+        "country",
         "associationId",
         "amount",
         "currency",
@@ -3906,6 +4015,64 @@
             }
           }
         },
+        "shippingAddress": {
+          "type": "object",
+          "properties": {
+            "lastName": {
+              "type": "string",
+              "example": "Doe"
+            },
+            "firstName": {
+              "type": "string",
+              "example": "John"
+            },
+            "address": {
+              "type": "string",
+              "example": "69 rue courtpoussin"
+            },
+            "zipCode": {
+              "type": "string",
+              "example": "76000"
+            },
+            "city": {
+              "type": "string",
+              "example": "Rouen"
+            },
+            "country": {
+              "type": "string",
+              "example": "FR"
+            }
+          }
+        },
+        "billingAddress": {
+          "type": "object",
+          "properties": {
+            "lastName": {
+              "type": "string",
+              "example": "Doe"
+            },
+            "firstName": {
+              "type": "string",
+              "example": "John"
+            },
+            "address": {
+              "type": "string",
+              "example": "69 rue courtpoussin"
+            },
+            "zipCode": {
+              "type": "string",
+              "example": "76000"
+            },
+            "city": {
+              "type": "string",
+              "example": "Rouen"
+            },
+            "country": {
+              "type": "string",
+              "example": "FR"
+            }
+          }
+        },
         "metadata": {
           "type": "array",
           "items": {
@@ -4001,6 +4168,33 @@
           "type": "integer",
           "format": "int64"
         },
+        "orderDetails": {
+          "type": "object",
+          "properties": {
+            "cycle": {
+              "type": "integer",
+              "format": "int64",
+              "example": 40
+            },
+            "count": {
+              "type": "integer",
+              "format": "int64",
+              "example": 3
+            },
+            "day": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "startAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "firstAmount": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        },
         "buyer": {
           "type": "object",
           "properties": {
@@ -4030,30 +4224,61 @@
             }
           }
         },
-        "orderDetails": {
+        "shippingAddress": {
           "type": "object",
           "properties": {
-            "cycle": {
-              "type": "integer",
-              "format": "int64",
-              "example": 40
-            },
-            "count": {
-              "type": "integer",
-              "format": "int64",
-              "example": 3
-            },
-            "day": {
-              "type": "integer",
-              "format": "int64"
-            },
-            "startAt": {
+            "lastName": {
               "type": "string",
-              "format": "date-time"
+              "example": "Doe"
             },
-            "firstAmount": {
-              "type": "integer",
-              "format": "int64"
+            "firstName": {
+              "type": "string",
+              "example": "John"
+            },
+            "address": {
+              "type": "string",
+              "example": "69 rue courtpoussin"
+            },
+            "zipCode": {
+              "type": "string",
+              "example": "76000"
+            },
+            "city": {
+              "type": "string",
+              "example": "Rouen"
+            },
+            "country": {
+              "type": "string",
+              "example": "FR"
+            }
+          }
+        },
+        "billingAddress": {
+          "type": "object",
+          "properties": {
+            "lastName": {
+              "type": "string",
+              "example": "Doe"
+            },
+            "firstName": {
+              "type": "string",
+              "example": "John"
+            },
+            "address": {
+              "type": "string",
+              "example": "69 rue courtpoussin"
+            },
+            "zipCode": {
+              "type": "string",
+              "example": "76000"
+            },
+            "city": {
+              "type": "string",
+              "example": "Rouen"
+            },
+            "country": {
+              "type": "string",
+              "example": "FR"
             }
           }
         },
@@ -4226,6 +4451,64 @@
             "companyName": {
               "type": "string",
               "example": "PayGreen"
+            }
+          }
+        },
+        "shippingAddress": {
+          "type": "object",
+          "properties": {
+            "lastName": {
+              "type": "string",
+              "example": "Doe"
+            },
+            "firstName": {
+              "type": "string",
+              "example": "John"
+            },
+            "address": {
+              "type": "string",
+              "example": "69 rue courtpoussin"
+            },
+            "zipCode": {
+              "type": "string",
+              "example": "76000"
+            },
+            "city": {
+              "type": "string",
+              "example": "Rouen"
+            },
+            "country": {
+              "type": "string",
+              "example": "FR"
+            }
+          }
+        },
+        "billingAddress": {
+          "type": "object",
+          "properties": {
+            "lastName": {
+              "type": "string",
+              "example": "Doe"
+            },
+            "firstName": {
+              "type": "string",
+              "example": "John"
+            },
+            "address": {
+              "type": "string",
+              "example": "69 rue courtpoussin"
+            },
+            "zipCode": {
+              "type": "string",
+              "example": "76000"
+            },
+            "city": {
+              "type": "string",
+              "example": "Rouen"
+            },
+            "country": {
+              "type": "string",
+              "example": "FR"
             }
           }
         },

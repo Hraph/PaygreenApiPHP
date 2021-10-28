@@ -68,6 +68,8 @@ class Payins implements ModelInterface, ArrayAccess, \JsonSerializable
         'notified_url' => 'string',
         'id_fingerprint' => 'int',
         'buyer' => '\Hraph\PaygreenApi\Model\PayinsBuyer',
+        'shipping_address' => '\Hraph\PaygreenApi\Model\PayinsShippingAddress',
+        'billing_address' => '\Hraph\PaygreenApi\Model\PayinsShippingAddress',
         'metadata' => 'string[]',
         'eligible_amount' => 'string[]',
         'card' => '\Hraph\PaygreenApi\Model\PayinsCard',
@@ -93,6 +95,8 @@ class Payins implements ModelInterface, ArrayAccess, \JsonSerializable
         'notified_url' => null,
         'id_fingerprint' => 'int64',
         'buyer' => null,
+        'shipping_address' => null,
+        'billing_address' => null,
         'metadata' => null,
         'eligible_amount' => null,
         'card' => null,
@@ -137,6 +141,8 @@ class Payins implements ModelInterface, ArrayAccess, \JsonSerializable
         'notified_url' => 'notified_url',
         'id_fingerprint' => 'idFingerprint',
         'buyer' => 'buyer',
+        'shipping_address' => 'shippingAddress',
+        'billing_address' => 'billingAddress',
         'metadata' => 'metadata',
         'eligible_amount' => 'eligibleAmount',
         'card' => 'card',
@@ -160,6 +166,8 @@ class Payins implements ModelInterface, ArrayAccess, \JsonSerializable
         'notified_url' => 'setNotifiedUrl',
         'id_fingerprint' => 'setIdFingerprint',
         'buyer' => 'setBuyer',
+        'shipping_address' => 'setShippingAddress',
+        'billing_address' => 'setBillingAddress',
         'metadata' => 'setMetadata',
         'eligible_amount' => 'setEligibleAmount',
         'card' => 'setCard',
@@ -183,6 +191,8 @@ class Payins implements ModelInterface, ArrayAccess, \JsonSerializable
         'notified_url' => 'getNotifiedUrl',
         'id_fingerprint' => 'getIdFingerprint',
         'buyer' => 'getBuyer',
+        'shipping_address' => 'getShippingAddress',
+        'billing_address' => 'getBillingAddress',
         'metadata' => 'getMetadata',
         'eligible_amount' => 'getEligibleAmount',
         'card' => 'getCard',
@@ -257,6 +267,8 @@ class Payins implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['notified_url'] = $data['notified_url'] ?? null;
         $this->container['id_fingerprint'] = $data['id_fingerprint'] ?? null;
         $this->container['buyer'] = $data['buyer'] ?? null;
+        $this->container['shipping_address'] = $data['shipping_address'] ?? null;
+        $this->container['billing_address'] = $data['billing_address'] ?? null;
         $this->container['metadata'] = $data['metadata'] ?? null;
         $this->container['eligible_amount'] = $data['eligible_amount'] ?? null;
         $this->container['card'] = $data['card'] ?? null;
@@ -487,6 +499,54 @@ class Payins implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setBuyer($buyer)
     {
         $this->container['buyer'] = $buyer;
+
+        return $this;
+    }
+
+    /**
+     * Gets shipping_address
+     *
+     * @return \Hraph\PaygreenApi\Model\PayinsShippingAddress|null
+     */
+    public function getShippingAddress()
+    {
+        return $this->container['shipping_address'];
+    }
+
+    /**
+     * Sets shipping_address
+     *
+     * @param \Hraph\PaygreenApi\Model\PayinsShippingAddress|null $shipping_address shipping_address
+     *
+     * @return self
+     */
+    public function setShippingAddress($shipping_address)
+    {
+        $this->container['shipping_address'] = $shipping_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets billing_address
+     *
+     * @return \Hraph\PaygreenApi\Model\PayinsShippingAddress|null
+     */
+    public function getBillingAddress()
+    {
+        return $this->container['billing_address'];
+    }
+
+    /**
+     * Sets billing_address
+     *
+     * @param \Hraph\PaygreenApi\Model\PayinsShippingAddress|null $billing_address billing_address
+     *
+     * @return self
+     */
+    public function setBillingAddress($billing_address)
+    {
+        $this->container['billing_address'] = $billing_address;
 
         return $this;
     }

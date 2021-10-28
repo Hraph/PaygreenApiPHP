@@ -67,8 +67,10 @@ class PayinsRecc implements ModelInterface, ArrayAccess, \JsonSerializable
         'returned_url' => 'string',
         'notified_url' => 'string',
         'id_fingerprint' => 'int',
-        'buyer' => '\Hraph\PaygreenApi\Model\PayinsBuyer',
         'order_details' => '\Hraph\PaygreenApi\Model\PayinsReccOrderDetails',
+        'buyer' => '\Hraph\PaygreenApi\Model\PayinsBuyer',
+        'shipping_address' => '\Hraph\PaygreenApi\Model\PayinsShippingAddress',
+        'billing_address' => '\Hraph\PaygreenApi\Model\PayinsShippingAddress',
         'card' => '\Hraph\PaygreenApi\Model\PayinsCard',
         'metadata' => 'string[]',
         'eligible_amount' => 'string[]',
@@ -93,8 +95,10 @@ class PayinsRecc implements ModelInterface, ArrayAccess, \JsonSerializable
         'returned_url' => null,
         'notified_url' => null,
         'id_fingerprint' => 'int64',
-        'buyer' => null,
         'order_details' => null,
+        'buyer' => null,
+        'shipping_address' => null,
+        'billing_address' => null,
         'card' => null,
         'metadata' => null,
         'eligible_amount' => null,
@@ -138,8 +142,10 @@ class PayinsRecc implements ModelInterface, ArrayAccess, \JsonSerializable
         'returned_url' => 'returned_url',
         'notified_url' => 'notified_url',
         'id_fingerprint' => 'idFingerprint',
-        'buyer' => 'buyer',
         'order_details' => 'orderDetails',
+        'buyer' => 'buyer',
+        'shipping_address' => 'shippingAddress',
+        'billing_address' => 'billingAddress',
         'card' => 'card',
         'metadata' => 'metadata',
         'eligible_amount' => 'eligibleAmount',
@@ -162,8 +168,10 @@ class PayinsRecc implements ModelInterface, ArrayAccess, \JsonSerializable
         'returned_url' => 'setReturnedUrl',
         'notified_url' => 'setNotifiedUrl',
         'id_fingerprint' => 'setIdFingerprint',
-        'buyer' => 'setBuyer',
         'order_details' => 'setOrderDetails',
+        'buyer' => 'setBuyer',
+        'shipping_address' => 'setShippingAddress',
+        'billing_address' => 'setBillingAddress',
         'card' => 'setCard',
         'metadata' => 'setMetadata',
         'eligible_amount' => 'setEligibleAmount',
@@ -186,8 +194,10 @@ class PayinsRecc implements ModelInterface, ArrayAccess, \JsonSerializable
         'returned_url' => 'getReturnedUrl',
         'notified_url' => 'getNotifiedUrl',
         'id_fingerprint' => 'getIdFingerprint',
-        'buyer' => 'getBuyer',
         'order_details' => 'getOrderDetails',
+        'buyer' => 'getBuyer',
+        'shipping_address' => 'getShippingAddress',
+        'billing_address' => 'getBillingAddress',
         'card' => 'getCard',
         'metadata' => 'getMetadata',
         'eligible_amount' => 'getEligibleAmount',
@@ -261,8 +271,10 @@ class PayinsRecc implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['returned_url'] = $data['returned_url'] ?? null;
         $this->container['notified_url'] = $data['notified_url'] ?? null;
         $this->container['id_fingerprint'] = $data['id_fingerprint'] ?? null;
-        $this->container['buyer'] = $data['buyer'] ?? null;
         $this->container['order_details'] = $data['order_details'] ?? null;
+        $this->container['buyer'] = $data['buyer'] ?? null;
+        $this->container['shipping_address'] = $data['shipping_address'] ?? null;
+        $this->container['billing_address'] = $data['billing_address'] ?? null;
         $this->container['card'] = $data['card'] ?? null;
         $this->container['metadata'] = $data['metadata'] ?? null;
         $this->container['eligible_amount'] = $data['eligible_amount'] ?? null;
@@ -474,6 +486,30 @@ class PayinsRecc implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets order_details
+     *
+     * @return \Hraph\PaygreenApi\Model\PayinsReccOrderDetails|null
+     */
+    public function getOrderDetails()
+    {
+        return $this->container['order_details'];
+    }
+
+    /**
+     * Sets order_details
+     *
+     * @param \Hraph\PaygreenApi\Model\PayinsReccOrderDetails|null $order_details order_details
+     *
+     * @return self
+     */
+    public function setOrderDetails($order_details)
+    {
+        $this->container['order_details'] = $order_details;
+
+        return $this;
+    }
+
+    /**
      * Gets buyer
      *
      * @return \Hraph\PaygreenApi\Model\PayinsBuyer|null
@@ -498,25 +534,49 @@ class PayinsRecc implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets order_details
+     * Gets shipping_address
      *
-     * @return \Hraph\PaygreenApi\Model\PayinsReccOrderDetails|null
+     * @return \Hraph\PaygreenApi\Model\PayinsShippingAddress|null
      */
-    public function getOrderDetails()
+    public function getShippingAddress()
     {
-        return $this->container['order_details'];
+        return $this->container['shipping_address'];
     }
 
     /**
-     * Sets order_details
+     * Sets shipping_address
      *
-     * @param \Hraph\PaygreenApi\Model\PayinsReccOrderDetails|null $order_details order_details
+     * @param \Hraph\PaygreenApi\Model\PayinsShippingAddress|null $shipping_address shipping_address
      *
      * @return self
      */
-    public function setOrderDetails($order_details)
+    public function setShippingAddress($shipping_address)
     {
-        $this->container['order_details'] = $order_details;
+        $this->container['shipping_address'] = $shipping_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets billing_address
+     *
+     * @return \Hraph\PaygreenApi\Model\PayinsShippingAddress|null
+     */
+    public function getBillingAddress()
+    {
+        return $this->container['billing_address'];
+    }
+
+    /**
+     * Sets billing_address
+     *
+     * @param \Hraph\PaygreenApi\Model\PayinsShippingAddress|null $billing_address billing_address
+     *
+     * @return self
+     */
+    public function setBillingAddress($billing_address)
+    {
+        $this->container['billing_address'] = $billing_address;
 
         return $this;
     }

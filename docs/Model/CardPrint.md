@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **result** | [**\Hraph\PaygreenApi\Model\TransactionResult**](TransactionResult.md) |  | [optional]
 **card** | [**\Hraph\PaygreenApi\Model\TransactionCard**](TransactionCard.md) |  | [optional]
 **buyer** | [**\Hraph\PaygreenApi\Model\PayinsBuyer**](PayinsBuyer.md) |  | [optional]
+**shipping_address** | [**\Hraph\PaygreenApi\Model\PayinsShippingAddress**](PayinsShippingAddress.md) |  | [optional]
+**billing_address** | [**\Hraph\PaygreenApi\Model\PayinsShippingAddress**](PayinsShippingAddress.md) |  | [optional]
 **metadata** | **string[]** |  | [optional] [readonly]
 **explanation** | **string** |  | [optional] [readonly]
 **created_at** | **\DateTime** |  | [optional] [readonly]

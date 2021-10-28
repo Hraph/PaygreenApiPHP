@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **payment_folder** | **string** |  | [optional] [readonly]
 **order_id** | **string** |  | [optional] [readonly]
 **amount** | **int** | Le montant est en centimes. | [readonly]
+**original_amount** | **int** |  | [optional] [readonly]
 **currency** | **string** |  | [readonly]
 **type** | **string** |  | [optional] [readonly]
 **payment_type** | **string** |  |
@@ -17,6 +18,8 @@ Name | Type | Description | Notes
 **result** | [**\Hraph\PaygreenApi\Model\TransactionResult**](TransactionResult.md) |  | [optional]
 **card** | [**\Hraph\PaygreenApi\Model\TransactionCard**](TransactionCard.md) |  | [optional]
 **buyer** | [**\Hraph\PaygreenApi\Model\TransactionBuyer**](TransactionBuyer.md) |  | [optional]
+**shipping_address** | [**\Hraph\PaygreenApi\Model\TransactionShippingAddress**](TransactionShippingAddress.md) |  | [optional]
+**billing_address** | [**\Hraph\PaygreenApi\Model\TransactionBillingAddress**](TransactionBillingAddress.md) |  | [optional]
 **schedules** | [**\Hraph\PaygreenApi\Model\TransactionSchedules**](TransactionSchedules.md) |  | [optional]
 **donation** | [**\Hraph\PaygreenApi\Model\TransactionDonation**](TransactionDonation.md) |  | [optional]
 **metadata** | **string[]** |  | [optional]

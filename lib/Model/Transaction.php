@@ -65,6 +65,7 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_folder' => 'string',
         'order_id' => 'string',
         'amount' => 'int',
+        'original_amount' => 'int',
         'currency' => 'string',
         'type' => 'string',
         'payment_type' => 'string',
@@ -73,6 +74,8 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
         'result' => '\Hraph\PaygreenApi\Model\TransactionResult',
         'card' => '\Hraph\PaygreenApi\Model\TransactionCard',
         'buyer' => '\Hraph\PaygreenApi\Model\TransactionBuyer',
+        'shipping_address' => '\Hraph\PaygreenApi\Model\TransactionShippingAddress',
+        'billing_address' => '\Hraph\PaygreenApi\Model\TransactionBillingAddress',
         'schedules' => '\Hraph\PaygreenApi\Model\TransactionSchedules',
         'donation' => '\Hraph\PaygreenApi\Model\TransactionDonation',
         'metadata' => 'string[]',
@@ -98,6 +101,7 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_folder' => null,
         'order_id' => null,
         'amount' => 'int64',
+        'original_amount' => 'int64',
         'currency' => null,
         'type' => null,
         'payment_type' => null,
@@ -106,6 +110,8 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
         'result' => null,
         'card' => null,
         'buyer' => null,
+        'shipping_address' => null,
+        'billing_address' => null,
         'schedules' => null,
         'donation' => null,
         'metadata' => null,
@@ -150,6 +156,7 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_folder' => 'paymentFolder',
         'order_id' => 'orderId',
         'amount' => 'amount',
+        'original_amount' => 'originalAmount',
         'currency' => 'currency',
         'type' => 'type',
         'payment_type' => 'paymentType',
@@ -158,6 +165,8 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
         'result' => 'result',
         'card' => 'card',
         'buyer' => 'buyer',
+        'shipping_address' => 'shippingAddress',
+        'billing_address' => 'billingAddress',
         'schedules' => 'schedules',
         'donation' => 'donation',
         'metadata' => 'metadata',
@@ -181,6 +190,7 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_folder' => 'setPaymentFolder',
         'order_id' => 'setOrderId',
         'amount' => 'setAmount',
+        'original_amount' => 'setOriginalAmount',
         'currency' => 'setCurrency',
         'type' => 'setType',
         'payment_type' => 'setPaymentType',
@@ -189,6 +199,8 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
         'result' => 'setResult',
         'card' => 'setCard',
         'buyer' => 'setBuyer',
+        'shipping_address' => 'setShippingAddress',
+        'billing_address' => 'setBillingAddress',
         'schedules' => 'setSchedules',
         'donation' => 'setDonation',
         'metadata' => 'setMetadata',
@@ -212,6 +224,7 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_folder' => 'getPaymentFolder',
         'order_id' => 'getOrderId',
         'amount' => 'getAmount',
+        'original_amount' => 'getOriginalAmount',
         'currency' => 'getCurrency',
         'type' => 'getType',
         'payment_type' => 'getPaymentType',
@@ -220,6 +233,8 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
         'result' => 'getResult',
         'card' => 'getCard',
         'buyer' => 'getBuyer',
+        'shipping_address' => 'getShippingAddress',
+        'billing_address' => 'getBillingAddress',
         'schedules' => 'getSchedules',
         'donation' => 'getDonation',
         'metadata' => 'getMetadata',
@@ -294,6 +309,7 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['payment_folder'] = $data['payment_folder'] ?? null;
         $this->container['order_id'] = $data['order_id'] ?? null;
         $this->container['amount'] = $data['amount'] ?? null;
+        $this->container['original_amount'] = $data['original_amount'] ?? null;
         $this->container['currency'] = $data['currency'] ?? null;
         $this->container['type'] = $data['type'] ?? null;
         $this->container['payment_type'] = $data['payment_type'] ?? null;
@@ -302,6 +318,8 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['result'] = $data['result'] ?? null;
         $this->container['card'] = $data['card'] ?? null;
         $this->container['buyer'] = $data['buyer'] ?? null;
+        $this->container['shipping_address'] = $data['shipping_address'] ?? null;
+        $this->container['billing_address'] = $data['billing_address'] ?? null;
         $this->container['schedules'] = $data['schedules'] ?? null;
         $this->container['donation'] = $data['donation'] ?? null;
         $this->container['metadata'] = $data['metadata'] ?? null;
@@ -466,6 +484,30 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setAmount($amount)
     {
         $this->container['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets original_amount
+     *
+     * @return int|null
+     */
+    public function getOriginalAmount()
+    {
+        return $this->container['original_amount'];
+    }
+
+    /**
+     * Sets original_amount
+     *
+     * @param int|null $original_amount original_amount
+     *
+     * @return self
+     */
+    public function setOriginalAmount($original_amount)
+    {
+        $this->container['original_amount'] = $original_amount;
 
         return $this;
     }
@@ -658,6 +700,54 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setBuyer($buyer)
     {
         $this->container['buyer'] = $buyer;
+
+        return $this;
+    }
+
+    /**
+     * Gets shipping_address
+     *
+     * @return \Hraph\PaygreenApi\Model\TransactionShippingAddress|null
+     */
+    public function getShippingAddress()
+    {
+        return $this->container['shipping_address'];
+    }
+
+    /**
+     * Sets shipping_address
+     *
+     * @param \Hraph\PaygreenApi\Model\TransactionShippingAddress|null $shipping_address shipping_address
+     *
+     * @return self
+     */
+    public function setShippingAddress($shipping_address)
+    {
+        $this->container['shipping_address'] = $shipping_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets billing_address
+     *
+     * @return \Hraph\PaygreenApi\Model\TransactionBillingAddress|null
+     */
+    public function getBillingAddress()
+    {
+        return $this->container['billing_address'];
+    }
+
+    /**
+     * Sets billing_address
+     *
+     * @param \Hraph\PaygreenApi\Model\TransactionBillingAddress|null $billing_address billing_address
+     *
+     * @return self
+     */
+    public function setBillingAddress($billing_address)
+    {
+        $this->container['billing_address'] = $billing_address;
 
         return $this;
     }
