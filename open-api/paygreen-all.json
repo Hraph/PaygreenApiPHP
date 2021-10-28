@@ -4514,6 +4514,11 @@
           "type": "string",
           "example": "EUR"
         },
+        "shopId": {
+          "type": "integer",
+          "format": "int64",
+          "example": 123
+        },
         "bankId": {
           "type": "integer",
           "format": "int64",
@@ -4544,11 +4549,6 @@
           "format": "date-time",
           "example": "2004-02-12T23:00:00",
           "readOnly": true
-        },
-        "shopId": {
-          "type": "integer",
-          "format": "int64",
-          "example": 123
         },
         "executedAt": {
           "type": "string",
