@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **message** | **string** |  | [optional]
 **code** | **int** |  | [optional]
 **data** | [**\Hraph\PaygreenApi\Model\Transfer[]**](Transfer.md) |  | [optional]
-**paginator** | **object[]** |  | [optional]
+**paginator** | **object** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

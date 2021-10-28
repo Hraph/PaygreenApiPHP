@@ -64,7 +64,7 @@ class InlineResponse20021 implements ModelInterface, ArrayAccess, \JsonSerializa
         'message' => 'string',
         'code' => 'int',
         'data' => '\Hraph\PaygreenApi\Model\Transfer[]',
-        'paginator' => 'object[]'
+        'paginator' => 'object'
     ];
 
     /**
@@ -329,7 +329,7 @@ class InlineResponse20021 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets paginator
      *
-     * @return object[]|null
+     * @return object|null
      */
     public function getPaginator()
     {
@@ -339,7 +339,7 @@ class InlineResponse20021 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets paginator
      *
-     * @param object[]|null $paginator paginator
+     * @param object|null $paginator paginator
      *
      * @return self
      */
