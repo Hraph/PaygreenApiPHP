@@ -1,18 +1,19 @@
 # Hraph\PaygreenApi\AuthentificationOAuthApi
 
-All URIs are relative to *https://paygreen.fr*
+All URIs are relative to https://paygreen.fr.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiAuthAccessTokenPost**](AuthentificationOAuthApi.md#apiAuthAccessTokenPost) | **POST** /api/auth/accessToken | Contrôle OAuth
-[**apiAuthAuthorizeGet**](AuthentificationOAuthApi.md#apiAuthAuthorizeGet) | **GET** /api/auth/authorize | Affichage de la page d&#39;authentification PayGreen
-[**apiAuthPost**](AuthentificationOAuthApi.md#apiAuthPost) | **POST** /api/auth/ | Création d&#39;un token d&#39;accès au protocole OAuth
+[**apiAuthAccessTokenPost()**](AuthentificationOAuthApi.md#apiAuthAccessTokenPost) | **POST** /api/auth/accessToken | Contrôle OAuth
+[**apiAuthAuthorizeGet()**](AuthentificationOAuthApi.md#apiAuthAuthorizeGet) | **GET** /api/auth/authorize | Affichage de la page d&#39;authentification PayGreen
+[**apiAuthPost()**](AuthentificationOAuthApi.md#apiAuthPost) | **POST** /api/auth/ | Création d&#39;un token d&#39;accès au protocole OAuth
 
 
+## `apiAuthAccessTokenPost()`
 
-## apiAuthAccessTokenPost
-
-> \Hraph\PaygreenApi\Model\InlineResponse2002 apiAuthAccessTokenPost($client_id, $grant_type, $code)
+```php
+apiAuthAccessTokenPost($client_id, $grant_type, $code): \Hraph\PaygreenApi\Model\InlineResponse2002
+```
 
 Contrôle OAuth
 
@@ -23,6 +24,7 @@ Cette méthode permet de contrôler le retour après l'authentification OAuth, e
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\AuthentificationOAuthApi(
@@ -40,11 +42,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuthentificationOAuthApi->apiAuthAccessTokenPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -63,16 +63,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiAuthAuthorizeGet()`
 
-## apiAuthAuthorizeGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse2001 apiAuthAuthorizeGet($client_id, $redirect_uri, $response_type)
+```php
+apiAuthAuthorizeGet($client_id, $redirect_uri, $response_type): \Hraph\PaygreenApi\Model\InlineResponse2001
+```
 
 Affichage de la page d'authentification PayGreen
 
@@ -83,6 +84,7 @@ Cette méthode permet d'afficher la page d'authentification PayGreen. Via cette 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\AuthentificationOAuthApi(
@@ -100,11 +102,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuthentificationOAuthApi->apiAuthAuthorizeGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -123,16 +123,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiAuthPost()`
 
-## apiAuthPost
-
-> \Hraph\PaygreenApi\Model\InlineResponse200 apiAuthPost($auth_access_token)
+```php
+apiAuthPost($auth_access_token): \Hraph\PaygreenApi\Model\InlineResponse200
+```
 
 Création d'un token d'accès au protocole OAuth
 
@@ -143,6 +144,7 @@ Cette méthode permet de créer un token d'accès au protocole OAuth **PayGreen 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\AuthentificationOAuthApi(
@@ -158,11 +160,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuthentificationOAuthApi->apiAuthPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -178,10 +178,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

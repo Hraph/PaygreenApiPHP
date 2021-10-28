@@ -1,24 +1,25 @@
 # Hraph\PaygreenApi\LesTransactionsApi
 
-All URIs are relative to *https://paygreen.fr*
+All URIs are relative to https://paygreen.fr.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIdentifiantPayinsTransactionCancelPost**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionCancelPost) | **POST** /api/{identifiant}/payins/transaction/cancel | Annulation
-[**apiIdentifiantPayinsTransactionCashPost**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionCashPost) | **POST** /api/{identifiant}/payins/transaction/cash | Paiement comptant
-[**apiIdentifiantPayinsTransactionIdDelete**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionIdDelete) | **DELETE** /api/{identifiant}/payins/transaction/{id} | Remboursement
-[**apiIdentifiantPayinsTransactionIdGet**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionIdGet) | **GET** /api/{identifiant}/payins/transaction/{id} | Détails
-[**apiIdentifiantPayinsTransactionIdPatch**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionIdPatch) | **PATCH** /api/{identifiant}/payins/transaction/{id} | Modification du montant
-[**apiIdentifiantPayinsTransactionIdPut**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionIdPut) | **PUT** /api/{identifiant}/payins/transaction/{id} | Confirmer une transaction
-[**apiIdentifiantPayinsTransactionSubscriptionPost**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionSubscriptionPost) | **POST** /api/{identifiant}/payins/transaction/subscription | Paiement abonnement
-[**apiIdentifiantPayinsTransactionTokenizePost**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionTokenizePost) | **POST** /api/{identifiant}/payins/transaction/tokenize | Paiement avec confirmation
-[**apiIdentifiantPayinsTransactionXtimePost**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionXtimePost) | **POST** /api/{identifiant}/payins/transaction/xtime | Paiement en plusieurs fois
+[**apiIdentifiantPayinsTransactionCancelPost()**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionCancelPost) | **POST** /api/{identifiant}/payins/transaction/cancel | Annulation
+[**apiIdentifiantPayinsTransactionCashPost()**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionCashPost) | **POST** /api/{identifiant}/payins/transaction/cash | Paiement comptant
+[**apiIdentifiantPayinsTransactionIdDelete()**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionIdDelete) | **DELETE** /api/{identifiant}/payins/transaction/{id} | Remboursement
+[**apiIdentifiantPayinsTransactionIdGet()**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionIdGet) | **GET** /api/{identifiant}/payins/transaction/{id} | Détails
+[**apiIdentifiantPayinsTransactionIdPatch()**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionIdPatch) | **PATCH** /api/{identifiant}/payins/transaction/{id} | Modification du montant
+[**apiIdentifiantPayinsTransactionIdPut()**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionIdPut) | **PUT** /api/{identifiant}/payins/transaction/{id} | Confirmer une transaction
+[**apiIdentifiantPayinsTransactionSubscriptionPost()**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionSubscriptionPost) | **POST** /api/{identifiant}/payins/transaction/subscription | Paiement abonnement
+[**apiIdentifiantPayinsTransactionTokenizePost()**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionTokenizePost) | **POST** /api/{identifiant}/payins/transaction/tokenize | Paiement avec confirmation
+[**apiIdentifiantPayinsTransactionXtimePost()**](LesTransactionsApi.md#apiIdentifiantPayinsTransactionXtimePost) | **POST** /api/{identifiant}/payins/transaction/xtime | Paiement en plusieurs fois
 
 
+## `apiIdentifiantPayinsTransactionCancelPost()`
 
-## apiIdentifiantPayinsTransactionCancelPost
-
-> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionCancelPost($identifiant, $authorization, $id)
+```php
+apiIdentifiantPayinsTransactionCancelPost($identifiant, $authorization, $id): \Hraph\PaygreenApi\Model\InlineResponse20012
+```
 
 Annulation
 
@@ -29,6 +30,7 @@ Cette requête vous permet d'annuler un paiement comptant, à la livraison, par 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesTransactionsApi(
@@ -46,11 +48,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesTransactionsApi->apiIdentifiantPayinsTransactionCancelPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -69,16 +69,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantPayinsTransactionCashPost()`
 
-## apiIdentifiantPayinsTransactionCashPost
-
-> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionCashPost($identifiant, $authorization, $payins)
+```php
+apiIdentifiantPayinsTransactionCashPost($identifiant, $authorization, $payins): \Hraph\PaygreenApi\Model\InlineResponse20012
+```
 
 Paiement comptant
 
@@ -89,6 +90,7 @@ Cette requête vous permet de créer un paiement **comptant**. Le paramètre `re
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesTransactionsApi(
@@ -106,11 +108,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesTransactionsApi->apiIdentifiantPayinsTransactionCashPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -128,17 +128,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantPayinsTransactionIdDelete()`
 
-## apiIdentifiantPayinsTransactionIdDelete
-
-> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionIdDelete($identifiant, $authorization, $id)
+```php
+apiIdentifiantPayinsTransactionIdDelete($identifiant, $authorization, $id): \Hraph\PaygreenApi\Model\InlineResponse20012
+```
 
 Remboursement
 
@@ -149,6 +150,7 @@ Cette requête vous permet de rembourser totalement ou partiellement une transac
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesTransactionsApi(
@@ -166,11 +168,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesTransactionsApi->apiIdentifiantPayinsTransactionIdDelete: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -189,16 +189,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantPayinsTransactionIdGet()`
 
-## apiIdentifiantPayinsTransactionIdGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionIdGet($identifiant, $authorization, $id)
+```php
+apiIdentifiantPayinsTransactionIdGet($identifiant, $authorization, $id): \Hraph\PaygreenApi\Model\InlineResponse20012
+```
 
 Détails
 
@@ -209,6 +210,7 @@ Cette requête vous permet d'obtenir tous les détails d'une transaction. Le mon
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesTransactionsApi(
@@ -226,11 +228,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesTransactionsApi->apiIdentifiantPayinsTransactionIdGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -249,16 +249,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantPayinsTransactionIdPatch()`
 
-## apiIdentifiantPayinsTransactionIdPatch
-
-> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionIdPatch($identifiant, $authorization, $id, $patch_amount)
+```php
+apiIdentifiantPayinsTransactionIdPatch($identifiant, $authorization, $id, $patch_amount): \Hraph\PaygreenApi\Model\InlineResponse20012
+```
 
 Modification du montant
 
@@ -269,6 +270,7 @@ Cette requête vous permet de modifier le montant d'un paiement en cours. Vous p
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesTransactionsApi(
@@ -287,11 +289,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesTransactionsApi->apiIdentifiantPayinsTransactionIdPatch: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -310,17 +310,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantPayinsTransactionIdPut()`
 
-## apiIdentifiantPayinsTransactionIdPut
-
-> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionIdPut($identifiant, $authorization, $id, $execute_transaction)
+```php
+apiIdentifiantPayinsTransactionIdPut($identifiant, $authorization, $id, $execute_transaction): \Hraph\PaygreenApi\Model\InlineResponse20012
+```
 
 Confirmer une transaction
 
@@ -331,6 +332,7 @@ Cette requête vous permet de confirmer une transaction **e-caution** ou **à la
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesTransactionsApi(
@@ -349,11 +351,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesTransactionsApi->apiIdentifiantPayinsTransactionIdPut: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -372,17 +372,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantPayinsTransactionSubscriptionPost()`
 
-## apiIdentifiantPayinsTransactionSubscriptionPost
-
-> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionSubscriptionPost($identifiant, $authorization, $payins_recc)
+```php
+apiIdentifiantPayinsTransactionSubscriptionPost($identifiant, $authorization, $payins_recc): \Hraph\PaygreenApi\Model\InlineResponse20012
+```
 
 Paiement abonnement
 
@@ -393,6 +394,7 @@ Cette requête vous permet de créer un **abonnement**. <br /> <br /> Le paramè
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesTransactionsApi(
@@ -410,11 +412,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesTransactionsApi->apiIdentifiantPayinsTransactionSubscriptionPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -432,17 +432,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantPayinsTransactionTokenizePost()`
 
-## apiIdentifiantPayinsTransactionTokenizePost
-
-> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionTokenizePost($identifiant, $authorization, $payins)
+```php
+apiIdentifiantPayinsTransactionTokenizePost($identifiant, $authorization, $payins): \Hraph\PaygreenApi\Model\InlineResponse20012
+```
 
 Paiement avec confirmation
 
@@ -453,6 +454,7 @@ Cette requête vous permet de créer un **paiement de type comptant à la livrai
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesTransactionsApi(
@@ -470,11 +472,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesTransactionsApi->apiIdentifiantPayinsTransactionTokenizePost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -492,17 +492,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantPayinsTransactionXtimePost()`
 
-## apiIdentifiantPayinsTransactionXtimePost
-
-> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsTransactionXtimePost($identifiant, $authorization, $payins_recc)
+```php
+apiIdentifiantPayinsTransactionXtimePost($identifiant, $authorization, $payins_recc): \Hraph\PaygreenApi\Model\InlineResponse20012
+```
 
 Paiement en plusieurs fois
 
@@ -513,6 +514,7 @@ Cette requête vous permet de créer un **paiement de type récurrent ou X fois 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesTransactionsApi(
@@ -530,11 +532,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesTransactionsApi->apiIdentifiantPayinsTransactionXtimePost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -552,10 +552,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

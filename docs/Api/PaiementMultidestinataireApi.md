@@ -1,16 +1,17 @@
 # Hraph\PaygreenApi\PaiementMultidestinataireApi
 
-All URIs are relative to *https://paygreen.fr*
+All URIs are relative to https://paygreen.fr.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIdentifiantPayinsMultiCashPost**](PaiementMultidestinataireApi.md#apiIdentifiantPayinsMultiCashPost) | **POST** /api/{identifiant}/payins/multi/cash | Créer un paiement multidestinataires
+[**apiIdentifiantPayinsMultiCashPost()**](PaiementMultidestinataireApi.md#apiIdentifiantPayinsMultiCashPost) | **POST** /api/{identifiant}/payins/multi/cash | Créer un paiement multidestinataires
 
 
+## `apiIdentifiantPayinsMultiCashPost()`
 
-## apiIdentifiantPayinsMultiCashPost
-
-> \Hraph\PaygreenApi\Model\InlineResponse20012 apiIdentifiantPayinsMultiCashPost($identifiant, $authorization, $payins_multi)
+```php
+apiIdentifiantPayinsMultiCashPost($identifiant, $authorization, $payins_multi): \Hraph\PaygreenApi\Model\InlineResponse20012
+```
 
 Créer un paiement multidestinataires
 
@@ -21,6 +22,7 @@ Créer un paiement entre plusieurs destinataires. Vous pouvez définir plusieurs
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\PaiementMultidestinataireApi(
@@ -38,11 +40,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PaiementMultidestinataireApi->apiIdentifiantPayinsMultiCashPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -60,10 +60,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

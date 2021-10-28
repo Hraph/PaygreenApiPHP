@@ -1,18 +1,19 @@
 # Hraph\PaygreenApi\LesVirementsApi
 
-All URIs are relative to *https://paygreen.fr*
+All URIs are relative to https://paygreen.fr.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIdentifiantPayoutTransferGet**](LesVirementsApi.md#apiIdentifiantPayoutTransferGet) | **GET** /api/{identifiant}/payout/transfer | Liste des virements
-[**apiIdentifiantPayoutTransferIdGet**](LesVirementsApi.md#apiIdentifiantPayoutTransferIdGet) | **GET** /api/{identifiant}/payout/transfer/{id} | Détails
-[**apiIdentifiantPayoutTransferPost**](LesVirementsApi.md#apiIdentifiantPayoutTransferPost) | **POST** /api/{identifiant}/payout/transfer | Créer un virement
+[**apiIdentifiantPayoutTransferGet()**](LesVirementsApi.md#apiIdentifiantPayoutTransferGet) | **GET** /api/{identifiant}/payout/transfer | Liste des virements
+[**apiIdentifiantPayoutTransferIdGet()**](LesVirementsApi.md#apiIdentifiantPayoutTransferIdGet) | **GET** /api/{identifiant}/payout/transfer/{id} | Détails
+[**apiIdentifiantPayoutTransferPost()**](LesVirementsApi.md#apiIdentifiantPayoutTransferPost) | **POST** /api/{identifiant}/payout/transfer | Créer un virement
 
 
+## `apiIdentifiantPayoutTransferGet()`
 
-## apiIdentifiantPayoutTransferGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse20021 apiIdentifiantPayoutTransferGet($identifiant, $authorization)
+```php
+apiIdentifiantPayoutTransferGet($identifiant, $authorization): \Hraph\PaygreenApi\Model\InlineResponse20021
+```
 
 Liste des virements
 
@@ -23,6 +24,7 @@ Cette requête vous permet d'obtenir la liste des virements de votre boutique
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesVirementsApi(
@@ -39,11 +41,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesVirementsApi->apiIdentifiantPayoutTransferGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -61,16 +61,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantPayoutTransferIdGet()`
 
-## apiIdentifiantPayoutTransferIdGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse20020 apiIdentifiantPayoutTransferIdGet($identifiant, $authorization, $id)
+```php
+apiIdentifiantPayoutTransferIdGet($identifiant, $authorization, $id): \Hraph\PaygreenApi\Model\InlineResponse20020
+```
 
 Détails
 
@@ -81,6 +82,7 @@ Cette requête vous permet d'obtenir tous les détails d'un virement
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesVirementsApi(
@@ -98,11 +100,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesVirementsApi->apiIdentifiantPayoutTransferIdGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -121,16 +121,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantPayoutTransferPost()`
 
-## apiIdentifiantPayoutTransferPost
-
-> \Hraph\PaygreenApi\Model\InlineResponse20020 apiIdentifiantPayoutTransferPost($identifiant, $authorization, $transfer)
+```php
+apiIdentifiantPayoutTransferPost($identifiant, $authorization, $transfer): \Hraph\PaygreenApi\Model\InlineResponse20020
+```
 
 Créer un virement
 
@@ -141,6 +142,7 @@ Cette méthode permet de créer un virement. Si vous créez un virement vers un 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesVirementsApi(
@@ -158,11 +160,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesVirementsApi->apiIdentifiantPayoutTransferPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -180,10 +180,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

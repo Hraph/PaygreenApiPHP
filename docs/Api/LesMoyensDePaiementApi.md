@@ -1,16 +1,17 @@
 # Hraph\PaygreenApi\LesMoyensDePaiementApi
 
-All URIs are relative to *https://paygreen.fr*
+All URIs are relative to https://paygreen.fr.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIdentifiantPaymenttypeGet**](LesMoyensDePaiementApi.md#apiIdentifiantPaymenttypeGet) | **GET** /api/{identifiant}/paymenttype | Liste des moyens de paiement
+[**apiIdentifiantPaymenttypeGet()**](LesMoyensDePaiementApi.md#apiIdentifiantPaymenttypeGet) | **GET** /api/{identifiant}/paymenttype | Liste des moyens de paiement
 
 
+## `apiIdentifiantPaymenttypeGet()`
 
-## apiIdentifiantPaymenttypeGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse20011 apiIdentifiantPaymenttypeGet($identifiant, $authorization)
+```php
+apiIdentifiantPaymenttypeGet($identifiant, $authorization): \Hraph\PaygreenApi\Model\InlineResponse20011
+```
 
 Liste des moyens de paiement
 
@@ -21,6 +22,7 @@ Cette méthode permet de lister les moyens de paiement disponibles pour votre bo
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesMoyensDePaiementApi(
@@ -37,11 +39,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesMoyensDePaiementApi->apiIdentifiantPaymenttypeGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -59,9 +59,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

@@ -1,17 +1,18 @@
 # Hraph\PaygreenApi\GestionDesPropritairesApi
 
-All URIs are relative to *https://paygreen.fr*
+All URIs are relative to https://paygreen.fr.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIdentifiantShareholderGet**](GestionDesPropritairesApi.md#apiIdentifiantShareholderGet) | **GET** /api/{identifiant}/shareholder | Liste des propriétaires
-[**apiIdentifiantShareholderPost**](GestionDesPropritairesApi.md#apiIdentifiantShareholderPost) | **POST** /api/{identifiant}/shareholder | Créer un propriétaire
+[**apiIdentifiantShareholderGet()**](GestionDesPropritairesApi.md#apiIdentifiantShareholderGet) | **GET** /api/{identifiant}/shareholder | Liste des propriétaires
+[**apiIdentifiantShareholderPost()**](GestionDesPropritairesApi.md#apiIdentifiantShareholderPost) | **POST** /api/{identifiant}/shareholder | Créer un propriétaire
 
 
+## `apiIdentifiantShareholderGet()`
 
-## apiIdentifiantShareholderGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse2007 apiIdentifiantShareholderGet($identifiant, $authorization)
+```php
+apiIdentifiantShareholderGet($identifiant, $authorization): \Hraph\PaygreenApi\Model\InlineResponse2007
+```
 
 Liste des propriétaires
 
@@ -22,6 +23,7 @@ Obtenir la liste des propriétaires
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDesPropritairesApi(
@@ -38,11 +40,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDesPropritairesApi->apiIdentifiantShareholderGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -60,16 +60,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantShareholderPost()`
 
-## apiIdentifiantShareholderPost
-
-> \Hraph\PaygreenApi\Model\InlineResponse2008 apiIdentifiantShareholderPost($identifiant, $authorization, $shareholder)
+```php
+apiIdentifiantShareholderPost($identifiant, $authorization, $shareholder): \Hraph\PaygreenApi\Model\InlineResponse2008
+```
 
 Créer un propriétaire
 
@@ -80,6 +81,7 @@ Créer un nouveau propriétaire. Il vous est possible d'instancier plusieurs per
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDesPropritairesApi(
@@ -97,11 +99,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDesPropritairesApi->apiIdentifiantShareholderPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -119,10 +119,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

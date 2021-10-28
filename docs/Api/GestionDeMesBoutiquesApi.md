@@ -1,16 +1,17 @@
 # Hraph\PaygreenApi\GestionDeMesBoutiquesApi
 
-All URIs are relative to *https://paygreen.fr*
+All URIs are relative to https://paygreen.fr.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIdentifiantShopsGet**](GestionDeMesBoutiquesApi.md#apiIdentifiantShopsGet) | **GET** /api/{identifiant}/shops | Liste des boutiques
+[**apiIdentifiantShopsGet()**](GestionDeMesBoutiquesApi.md#apiIdentifiantShopsGet) | **GET** /api/{identifiant}/shops | Liste des boutiques
 
 
+## `apiIdentifiantShopsGet()`
 
-## apiIdentifiantShopsGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse2003 apiIdentifiantShopsGet($identifiant, $authorization)
+```php
+apiIdentifiantShopsGet($identifiant, $authorization): \Hraph\PaygreenApi\Model\InlineResponse2003
+```
 
 Liste des boutiques
 
@@ -21,6 +22,7 @@ Permet de lister toutes vos boutiques.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDeMesBoutiquesApi(
@@ -37,11 +39,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDeMesBoutiquesApi->apiIdentifiantShopsGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -59,9 +59,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

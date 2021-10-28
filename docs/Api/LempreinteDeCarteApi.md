@@ -1,19 +1,20 @@
 # Hraph\PaygreenApi\LempreinteDeCarteApi
 
-All URIs are relative to *https://paygreen.fr*
+All URIs are relative to https://paygreen.fr.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIdentifiantPayinsCardprintGet**](LempreinteDeCarteApi.md#apiIdentifiantPayinsCardprintGet) | **GET** /api/{identifiant}/payins/cardprint | Liste des empreintes de carte
-[**apiIdentifiantPayinsCardprintIdDelete**](LempreinteDeCarteApi.md#apiIdentifiantPayinsCardprintIdDelete) | **DELETE** /api/{identifiant}/payins/cardprint/{id} | Supprimer une empreinte
-[**apiIdentifiantPayinsCardprintIdGet**](LempreinteDeCarteApi.md#apiIdentifiantPayinsCardprintIdGet) | **GET** /api/{identifiant}/payins/cardprint/{id} | Détails
-[**apiIdentifiantPayinsCardprintPost**](LempreinteDeCarteApi.md#apiIdentifiantPayinsCardprintPost) | **POST** /api/{identifiant}/payins/cardprint | Création d&#39;une empreinte de carte
+[**apiIdentifiantPayinsCardprintGet()**](LempreinteDeCarteApi.md#apiIdentifiantPayinsCardprintGet) | **GET** /api/{identifiant}/payins/cardprint | Liste des empreintes de carte
+[**apiIdentifiantPayinsCardprintIdDelete()**](LempreinteDeCarteApi.md#apiIdentifiantPayinsCardprintIdDelete) | **DELETE** /api/{identifiant}/payins/cardprint/{id} | Supprimer une empreinte
+[**apiIdentifiantPayinsCardprintIdGet()**](LempreinteDeCarteApi.md#apiIdentifiantPayinsCardprintIdGet) | **GET** /api/{identifiant}/payins/cardprint/{id} | Détails
+[**apiIdentifiantPayinsCardprintPost()**](LempreinteDeCarteApi.md#apiIdentifiantPayinsCardprintPost) | **POST** /api/{identifiant}/payins/cardprint | Création d&#39;une empreinte de carte
 
 
+## `apiIdentifiantPayinsCardprintGet()`
 
-## apiIdentifiantPayinsCardprintGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse20013 apiIdentifiantPayinsCardprintGet($identifiant, $authorization)
+```php
+apiIdentifiantPayinsCardprintGet($identifiant, $authorization): \Hraph\PaygreenApi\Model\InlineResponse20013
+```
 
 Liste des empreintes de carte
 
@@ -24,6 +25,7 @@ Cette requête vous permet d'obtenir la liste des empreintes de carte de votre b
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LempreinteDeCarteApi(
@@ -40,11 +42,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LempreinteDeCarteApi->apiIdentifiantPayinsCardprintGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -62,16 +62,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantPayinsCardprintIdDelete()`
 
-## apiIdentifiantPayinsCardprintIdDelete
-
-> apiIdentifiantPayinsCardprintIdDelete($identifiant, $authorization, $id)
+```php
+apiIdentifiantPayinsCardprintIdDelete($identifiant, $authorization, $id)
+```
 
 Supprimer une empreinte
 
@@ -82,6 +83,7 @@ Cette requête permet de supprimer une empreinte de don à partir de son `id`.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LempreinteDeCarteApi(
@@ -98,11 +100,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LempreinteDeCarteApi->apiIdentifiantPayinsCardprintIdDelete: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -123,14 +123,15 @@ No authorization required
 - **Content-Type**: Not defined
 - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantPayinsCardprintIdGet()`
 
-## apiIdentifiantPayinsCardprintIdGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse20014 apiIdentifiantPayinsCardprintIdGet($identifiant, $authorization, $id)
+```php
+apiIdentifiantPayinsCardprintIdGet($identifiant, $authorization, $id): \Hraph\PaygreenApi\Model\InlineResponse20014
+```
 
 Détails
 
@@ -141,6 +142,7 @@ Cette requête vous permet d'obtenir tous les détails d'une empreinte de carte.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LempreinteDeCarteApi(
@@ -158,11 +160,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LempreinteDeCarteApi->apiIdentifiantPayinsCardprintIdGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -181,16 +181,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantPayinsCardprintPost()`
 
-## apiIdentifiantPayinsCardprintPost
-
-> \Hraph\PaygreenApi\Model\InlineResponse20014 apiIdentifiantPayinsCardprintPost($identifiant, $authorization, $card_print)
+```php
+apiIdentifiantPayinsCardprintPost($identifiant, $authorization, $card_print): \Hraph\PaygreenApi\Model\InlineResponse20014
+```
 
 Création d'une empreinte de carte
 
@@ -201,6 +202,7 @@ La création de l'empreinte de carte se traduit pour le consommateur par l'affic
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LempreinteDeCarteApi(
@@ -218,11 +220,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LempreinteDeCarteApi->apiIdentifiantPayinsCardprintPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -240,10 +240,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

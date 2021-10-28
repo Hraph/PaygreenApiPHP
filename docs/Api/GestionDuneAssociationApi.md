@@ -1,16 +1,17 @@
 # Hraph\PaygreenApi\GestionDuneAssociationApi
 
-All URIs are relative to *https://paygreen.fr*
+All URIs are relative to https://paygreen.fr.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIdentifiantSolidarityGet**](GestionDuneAssociationApi.md#apiIdentifiantSolidarityGet) | **GET** /api/{identifiant}/solidarity | Liste des associations
+[**apiIdentifiantSolidarityGet()**](GestionDuneAssociationApi.md#apiIdentifiantSolidarityGet) | **GET** /api/{identifiant}/solidarity | Liste des associations
 
 
+## `apiIdentifiantSolidarityGet()`
 
-## apiIdentifiantSolidarityGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse20015 apiIdentifiantSolidarityGet($identifiant, $authorization)
+```php
+apiIdentifiantSolidarityGet($identifiant, $authorization): \Hraph\PaygreenApi\Model\InlineResponse20015
+```
 
 Liste des associations
 
@@ -21,6 +22,7 @@ Obtenir la liste des associations
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDuneAssociationApi(
@@ -37,11 +39,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDuneAssociationApi->apiIdentifiantSolidarityGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -59,9 +59,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

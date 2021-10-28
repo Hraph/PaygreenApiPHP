@@ -1,17 +1,18 @@
 # Hraph\PaygreenApi\GestionDuComptePrincipalApi
 
-All URIs are relative to *https://paygreen.fr*
+All URIs are relative to https://paygreen.fr.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIdentifiantAccountGet**](GestionDuComptePrincipalApi.md#apiIdentifiantAccountGet) | **GET** /api/{identifiant}/account | Afficher le compte principal
-[**apiIdentifiantAccountPut**](GestionDuComptePrincipalApi.md#apiIdentifiantAccountPut) | **PUT** /api/{identifiant}/account | Met à jour le compte principal
+[**apiIdentifiantAccountGet()**](GestionDuComptePrincipalApi.md#apiIdentifiantAccountGet) | **GET** /api/{identifiant}/account | Afficher le compte principal
+[**apiIdentifiantAccountPut()**](GestionDuComptePrincipalApi.md#apiIdentifiantAccountPut) | **PUT** /api/{identifiant}/account | Met à jour le compte principal
 
 
+## `apiIdentifiantAccountGet()`
 
-## apiIdentifiantAccountGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse2004 apiIdentifiantAccountGet($identifiant, $authorization)
+```php
+apiIdentifiantAccountGet($identifiant, $authorization): \Hraph\PaygreenApi\Model\InlineResponse2004
+```
 
 Afficher le compte principal
 
@@ -22,6 +23,7 @@ Donne les informations sur le compte principal PayGreen.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDuComptePrincipalApi(
@@ -38,11 +40,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDuComptePrincipalApi->apiIdentifiantAccountGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -60,16 +60,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantAccountPut()`
 
-## apiIdentifiantAccountPut
-
-> \Hraph\PaygreenApi\Model\InlineResponse2004 apiIdentifiantAccountPut($identifiant, $authorization, $account)
+```php
+apiIdentifiantAccountPut($identifiant, $authorization, $account): \Hraph\PaygreenApi\Model\InlineResponse2004
+```
 
 Met à jour le compte principal
 
@@ -80,6 +81,7 @@ Met à jour les données du compte principal
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDuComptePrincipalApi(
@@ -97,11 +99,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDuComptePrincipalApi->apiIdentifiantAccountPut: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -119,10 +119,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

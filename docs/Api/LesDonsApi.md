@@ -1,18 +1,19 @@
 # Hraph\PaygreenApi\LesDonsApi
 
-All URIs are relative to *https://paygreen.fr*
+All URIs are relative to https://paygreen.fr.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIdentifiantSolidarityIdDelete**](LesDonsApi.md#apiIdentifiantSolidarityIdDelete) | **DELETE** /api/{identifiant}/solidarity/{id} | Supprimer un don
-[**apiIdentifiantSolidarityIdGet**](LesDonsApi.md#apiIdentifiantSolidarityIdGet) | **GET** /api/{identifiant}/solidarity/{id} | Afficher un don
-[**apiIdentifiantSolidarityIdPatch**](LesDonsApi.md#apiIdentifiantSolidarityIdPatch) | **PATCH** /api/{identifiant}/solidarity/{id} | Créer un don
+[**apiIdentifiantSolidarityIdDelete()**](LesDonsApi.md#apiIdentifiantSolidarityIdDelete) | **DELETE** /api/{identifiant}/solidarity/{id} | Supprimer un don
+[**apiIdentifiantSolidarityIdGet()**](LesDonsApi.md#apiIdentifiantSolidarityIdGet) | **GET** /api/{identifiant}/solidarity/{id} | Afficher un don
+[**apiIdentifiantSolidarityIdPatch()**](LesDonsApi.md#apiIdentifiantSolidarityIdPatch) | **PATCH** /api/{identifiant}/solidarity/{id} | Créer un don
 
 
+## `apiIdentifiantSolidarityIdDelete()`
 
-## apiIdentifiantSolidarityIdDelete
-
-> apiIdentifiantSolidarityIdDelete($identifiant, $authorization, $id)
+```php
+apiIdentifiantSolidarityIdDelete($identifiant, $authorization, $id)
+```
 
 Supprimer un don
 
@@ -23,6 +24,7 @@ Cette requête permet de supprimer un don à partir de son `id`.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesDonsApi(
@@ -39,11 +41,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesDonsApi->apiIdentifiantSolidarityIdDelete: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -64,14 +64,15 @@ No authorization required
 - **Content-Type**: Not defined
 - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantSolidarityIdGet()`
 
-## apiIdentifiantSolidarityIdGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse20016 apiIdentifiantSolidarityIdGet($identifiant, $authorization, $id)
+```php
+apiIdentifiantSolidarityIdGet($identifiant, $authorization, $id): \Hraph\PaygreenApi\Model\InlineResponse20016
+```
 
 Afficher un don
 
@@ -82,6 +83,7 @@ Cette requête permet d'obtenir les détails d'un don à partir de son `id`.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesDonsApi(
@@ -99,11 +101,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesDonsApi->apiIdentifiantSolidarityIdGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -122,16 +122,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantSolidarityIdPatch()`
 
-## apiIdentifiantSolidarityIdPatch
-
-> \Hraph\PaygreenApi\Model\InlineResponse20016 apiIdentifiantSolidarityIdPatch($identifiant, $authorization, $id, $solidarity)
+```php
+apiIdentifiantSolidarityIdPatch($identifiant, $authorization, $id, $solidarity): \Hraph\PaygreenApi\Model\InlineResponse20016
+```
 
 Créer un don
 
@@ -142,6 +143,7 @@ Cette requête vous permet de créer un don lié à une transaction. Pour cela, 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\LesDonsApi(
@@ -160,11 +162,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LesDonsApi->apiIdentifiantSolidarityIdPatch: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -183,10 +183,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

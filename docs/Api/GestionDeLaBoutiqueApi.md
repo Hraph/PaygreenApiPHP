@@ -1,21 +1,22 @@
 # Hraph\PaygreenApi\GestionDeLaBoutiqueApi
 
-All URIs are relative to *https://paygreen.fr*
+All URIs are relative to https://paygreen.fr.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIdentifiantShopGet**](GestionDeLaBoutiqueApi.md#apiIdentifiantShopGet) | **GET** /api/{identifiant}/shop | Afficher la boutique
-[**apiIdentifiantShopPatch**](GestionDeLaBoutiqueApi.md#apiIdentifiantShopPatch) | **PATCH** /api/{identifiant}/shop | Création et activation d&#39;un compte
-[**apiIdentifiantShopPost**](GestionDeLaBoutiqueApi.md#apiIdentifiantShopPost) | **POST** /api/{identifiant}/shop | Multi-boutiques : création d&#39;une boutique
-[**apiIdentifiantShopPut**](GestionDeLaBoutiqueApi.md#apiIdentifiantShopPut) | **PUT** /api/{identifiant}/shop | Mettre à jour la boutique
-[**apiIdentifiantShopShopIdGet**](GestionDeLaBoutiqueApi.md#apiIdentifiantShopShopIdGet) | **GET** /api/{identifiant}/shop/{shopId} | Multi-boutiques : afficher une boutique
-[**apiIdentifiantShopShopIdPut**](GestionDeLaBoutiqueApi.md#apiIdentifiantShopShopIdPut) | **PUT** /api/{identifiant}/shop/{shopId} | Multi-boutiques : mettre à jour une boutique
+[**apiIdentifiantShopGet()**](GestionDeLaBoutiqueApi.md#apiIdentifiantShopGet) | **GET** /api/{identifiant}/shop | Afficher la boutique
+[**apiIdentifiantShopPatch()**](GestionDeLaBoutiqueApi.md#apiIdentifiantShopPatch) | **PATCH** /api/{identifiant}/shop | Création et activation d&#39;un compte
+[**apiIdentifiantShopPost()**](GestionDeLaBoutiqueApi.md#apiIdentifiantShopPost) | **POST** /api/{identifiant}/shop | Multi-boutiques : création d&#39;une boutique
+[**apiIdentifiantShopPut()**](GestionDeLaBoutiqueApi.md#apiIdentifiantShopPut) | **PUT** /api/{identifiant}/shop | Mettre à jour la boutique
+[**apiIdentifiantShopShopIdGet()**](GestionDeLaBoutiqueApi.md#apiIdentifiantShopShopIdGet) | **GET** /api/{identifiant}/shop/{shopId} | Multi-boutiques : afficher une boutique
+[**apiIdentifiantShopShopIdPut()**](GestionDeLaBoutiqueApi.md#apiIdentifiantShopShopIdPut) | **PUT** /api/{identifiant}/shop/{shopId} | Multi-boutiques : mettre à jour une boutique
 
 
+## `apiIdentifiantShopGet()`
 
-## apiIdentifiantShopGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse2002 apiIdentifiantShopGet($identifiant, $authorization)
+```php
+apiIdentifiantShopGet($identifiant, $authorization): \Hraph\PaygreenApi\Model\InlineResponse2002
+```
 
 Afficher la boutique
 
@@ -26,6 +27,7 @@ Cette méthode permet de récupérer la configuration de la boutique (*boutique 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDeLaBoutiqueApi(
@@ -42,11 +44,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDeLaBoutiqueApi->apiIdentifiantShopGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -64,16 +64,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantShopPatch()`
 
-## apiIdentifiantShopPatch
-
-> \Hraph\PaygreenApi\Model\InlineResponse2002 apiIdentifiantShopPatch($identifiant, $authorization, $shop_patch)
+```php
+apiIdentifiantShopPatch($identifiant, $authorization, $shop_patch): \Hraph\PaygreenApi\Model\InlineResponse2002
+```
 
 Création et activation d'un compte
 
@@ -84,6 +85,7 @@ Cette méthode a deux actions&nbsp;:<br /> 1. Faire une demande de création d'u
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDeLaBoutiqueApi(
@@ -101,11 +103,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDeLaBoutiqueApi->apiIdentifiantShopPatch: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -123,17 +123,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantShopPost()`
 
-## apiIdentifiantShopPost
-
-> \Hraph\PaygreenApi\Model\InlineResponse2002 apiIdentifiantShopPost($identifiant, $authorization, $shop)
+```php
+apiIdentifiantShopPost($identifiant, $authorization, $shop): \Hraph\PaygreenApi\Model\InlineResponse2002
+```
 
 Multi-boutiques : création d'une boutique
 
@@ -144,6 +145,7 @@ Cette méthode permet de créer une nouvelle boutique. La création de la boutiq
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDeLaBoutiqueApi(
@@ -161,11 +163,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDeLaBoutiqueApi->apiIdentifiantShopPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -183,17 +183,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantShopPut()`
 
-## apiIdentifiantShopPut
-
-> \Hraph\PaygreenApi\Model\InlineResponse2002 apiIdentifiantShopPut($identifiant, $authorization, $shop)
+```php
+apiIdentifiantShopPut($identifiant, $authorization, $shop): \Hraph\PaygreenApi\Model\InlineResponse2002
+```
 
 Mettre à jour la boutique
 
@@ -204,6 +205,7 @@ Cette méthode permet de mettre à jour certaines informations de la boutique (*
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDeLaBoutiqueApi(
@@ -221,11 +223,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDeLaBoutiqueApi->apiIdentifiantShopPut: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -243,17 +243,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantShopShopIdGet()`
 
-## apiIdentifiantShopShopIdGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse2002 apiIdentifiantShopShopIdGet($identifiant, $authorization, $shop_id)
+```php
+apiIdentifiantShopShopIdGet($identifiant, $authorization, $shop_id): \Hraph\PaygreenApi\Model\InlineResponse2002
+```
 
 Multi-boutiques : afficher une boutique
 
@@ -264,6 +265,7 @@ Cette méthode permet de récupérer la configuration d'une boutique donnée `sh
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDeLaBoutiqueApi(
@@ -281,11 +283,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDeLaBoutiqueApi->apiIdentifiantShopShopIdGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -304,16 +304,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantShopShopIdPut()`
 
-## apiIdentifiantShopShopIdPut
-
-> \Hraph\PaygreenApi\Model\InlineResponse2002 apiIdentifiantShopShopIdPut($identifiant, $authorization, $shop_id, $shop)
+```php
+apiIdentifiantShopShopIdPut($identifiant, $authorization, $shop_id, $shop): \Hraph\PaygreenApi\Model\InlineResponse2002
+```
 
 Multi-boutiques : mettre à jour une boutique
 
@@ -324,6 +325,7 @@ Cette méthode permet de mettre à jour certaines informations d'une boutique do
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDeLaBoutiqueApi(
@@ -342,11 +344,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDeLaBoutiqueApi->apiIdentifiantShopShopIdPut: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -365,10 +365,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

@@ -1,17 +1,18 @@
 # Hraph\PaygreenApi\GestionDeMesRIBApi
 
-All URIs are relative to *https://paygreen.fr*
+All URIs are relative to https://paygreen.fr.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIdentifiantBankGet**](GestionDeMesRIBApi.md#apiIdentifiantBankGet) | **GET** /api/{identifiant}/bank | Afficher mon RIB
-[**apiIdentifiantBankPost**](GestionDeMesRIBApi.md#apiIdentifiantBankPost) | **POST** /api/{identifiant}/bank | Création d&#39;un RIB
+[**apiIdentifiantBankGet()**](GestionDeMesRIBApi.md#apiIdentifiantBankGet) | **GET** /api/{identifiant}/bank | Afficher mon RIB
+[**apiIdentifiantBankPost()**](GestionDeMesRIBApi.md#apiIdentifiantBankPost) | **POST** /api/{identifiant}/bank | Création d&#39;un RIB
 
 
+## `apiIdentifiantBankGet()`
 
-## apiIdentifiantBankGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse20018 apiIdentifiantBankGet($identifiant, $authorization)
+```php
+apiIdentifiantBankGet($identifiant, $authorization): \Hraph\PaygreenApi\Model\InlineResponse20018
+```
 
 Afficher mon RIB
 
@@ -22,6 +23,7 @@ Obtenir le ou les RIB de la boutique
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDeMesRIBApi(
@@ -38,11 +40,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDeMesRIBApi->apiIdentifiantBankGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -60,16 +60,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantBankPost()`
 
-## apiIdentifiantBankPost
-
-> \Hraph\PaygreenApi\Model\InlineResponse20019 apiIdentifiantBankPost($identifiant, $authorization, $rib)
+```php
+apiIdentifiantBankPost($identifiant, $authorization, $rib): \Hraph\PaygreenApi\Model\InlineResponse20019
+```
 
 Création d'un RIB
 
@@ -80,6 +81,7 @@ Permet de créer un nouveau RIB. Pour créer un RIB, il faut donner les valeurs 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDeMesRIBApi(
@@ -97,11 +99,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDeMesRIBApi->apiIdentifiantBankPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -119,10 +119,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

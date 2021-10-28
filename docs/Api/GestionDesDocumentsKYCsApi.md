@@ -1,19 +1,20 @@
 # Hraph\PaygreenApi\GestionDesDocumentsKYCsApi
 
-All URIs are relative to *https://paygreen.fr*
+All URIs are relative to https://paygreen.fr.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIdentifiantDocumentsGet**](GestionDesDocumentsKYCsApi.md#apiIdentifiantDocumentsGet) | **GET** /api/{identifiant}/documents | Liste des documents
-[**apiIdentifiantDocumentsIdDelete**](GestionDesDocumentsKYCsApi.md#apiIdentifiantDocumentsIdDelete) | **DELETE** /api/{identifiant}/documents/{id} | Supprimer un document
-[**apiIdentifiantDocumentsIdGet**](GestionDesDocumentsKYCsApi.md#apiIdentifiantDocumentsIdGet) | **GET** /api/{identifiant}/documents/{id} | Obtenir un document
-[**apiIdentifiantDocumentsPost**](GestionDesDocumentsKYCsApi.md#apiIdentifiantDocumentsPost) | **POST** /api/{identifiant}/documents | Envoyer des documents
+[**apiIdentifiantDocumentsGet()**](GestionDesDocumentsKYCsApi.md#apiIdentifiantDocumentsGet) | **GET** /api/{identifiant}/documents | Liste des documents
+[**apiIdentifiantDocumentsIdDelete()**](GestionDesDocumentsKYCsApi.md#apiIdentifiantDocumentsIdDelete) | **DELETE** /api/{identifiant}/documents/{id} | Supprimer un document
+[**apiIdentifiantDocumentsIdGet()**](GestionDesDocumentsKYCsApi.md#apiIdentifiantDocumentsIdGet) | **GET** /api/{identifiant}/documents/{id} | Obtenir un document
+[**apiIdentifiantDocumentsPost()**](GestionDesDocumentsKYCsApi.md#apiIdentifiantDocumentsPost) | **POST** /api/{identifiant}/documents | Envoyer des documents
 
 
+## `apiIdentifiantDocumentsGet()`
 
-## apiIdentifiantDocumentsGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse2009 apiIdentifiantDocumentsGet($identifiant, $authorization)
+```php
+apiIdentifiantDocumentsGet($identifiant, $authorization): \Hraph\PaygreenApi\Model\InlineResponse2009
+```
 
 Liste des documents
 
@@ -24,6 +25,7 @@ Obtenir la liste des documents nécessaires
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDesDocumentsKYCsApi(
@@ -40,11 +42,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDesDocumentsKYCsApi->apiIdentifiantDocumentsGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -62,16 +62,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantDocumentsIdDelete()`
 
-## apiIdentifiantDocumentsIdDelete
-
-> apiIdentifiantDocumentsIdDelete($identifiant, $authorization, $id)
+```php
+apiIdentifiantDocumentsIdDelete($identifiant, $authorization, $id)
+```
 
 Supprimer un document
 
@@ -82,6 +83,7 @@ Supprimer un document à partir de son `id`
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDesDocumentsKYCsApi(
@@ -98,11 +100,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDesDocumentsKYCsApi->apiIdentifiantDocumentsIdDelete: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -123,14 +123,15 @@ No authorization required
 - **Content-Type**: Not defined
 - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantDocumentsIdGet()`
 
-## apiIdentifiantDocumentsIdGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse20010 apiIdentifiantDocumentsIdGet($identifiant, $authorization, $id)
+```php
+apiIdentifiantDocumentsIdGet($identifiant, $authorization, $id): \Hraph\PaygreenApi\Model\InlineResponse20010
+```
 
 Obtenir un document
 
@@ -141,6 +142,7 @@ Obtenir plus d'informations sur un document
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDesDocumentsKYCsApi(
@@ -158,11 +160,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDesDocumentsKYCsApi->apiIdentifiantDocumentsIdGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -181,16 +181,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantDocumentsPost()`
 
-## apiIdentifiantDocumentsPost
-
-> \Hraph\PaygreenApi\Model\InlineResponse20010 apiIdentifiantDocumentsPost($identifiant, $authorization, $content_type)
+```php
+apiIdentifiantDocumentsPost($identifiant, $authorization, $content_type): \Hraph\PaygreenApi\Model\InlineResponse20010
+```
 
 Envoyer des documents
 
@@ -201,6 +202,7 @@ Permet d'envoyer un ou des document(s) manquant(s). Ici nous utilisons la métho
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDesDocumentsKYCsApi(
@@ -218,11 +220,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDesDocumentsKYCsApi->apiIdentifiantDocumentsPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -241,9 +241,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

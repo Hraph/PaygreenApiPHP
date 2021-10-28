@@ -1,17 +1,18 @@
 # Hraph\PaygreenApi\GestionDeLadresseApi
 
-All URIs are relative to *https://paygreen.fr*
+All URIs are relative to https://paygreen.fr.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIdentifiantAddressGet**](GestionDeLadresseApi.md#apiIdentifiantAddressGet) | **GET** /api/{identifiant}/address | Liste des adresses
-[**apiIdentifiantAddressPost**](GestionDeLadresseApi.md#apiIdentifiantAddressPost) | **POST** /api/{identifiant}/address | Créer une adresse
+[**apiIdentifiantAddressGet()**](GestionDeLadresseApi.md#apiIdentifiantAddressGet) | **GET** /api/{identifiant}/address | Liste des adresses
+[**apiIdentifiantAddressPost()**](GestionDeLadresseApi.md#apiIdentifiantAddressPost) | **POST** /api/{identifiant}/address | Créer une adresse
 
 
+## `apiIdentifiantAddressGet()`
 
-## apiIdentifiantAddressGet
-
-> \Hraph\PaygreenApi\Model\InlineResponse2005 apiIdentifiantAddressGet($identifiant, $authorization)
+```php
+apiIdentifiantAddressGet($identifiant, $authorization): \Hraph\PaygreenApi\Model\InlineResponse2005
+```
 
 Liste des adresses
 
@@ -22,6 +23,7 @@ Obtenir la liste de vos adresses
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDeLadresseApi(
@@ -38,11 +40,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDeLadresseApi->apiIdentifiantAddressGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -60,16 +60,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `apiIdentifiantAddressPost()`
 
-## apiIdentifiantAddressPost
-
-> \Hraph\PaygreenApi\Model\InlineResponse2006 apiIdentifiantAddressPost($identifiant, $authorization, $address)
+```php
+apiIdentifiantAddressPost($identifiant, $authorization, $address): \Hraph\PaygreenApi\Model\InlineResponse2006
+```
 
 Créer une adresse
 
@@ -80,6 +81,7 @@ Créer une nouvelle adresse. Pour créer une nouvelle adresse, vous devez fourni
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Hraph\PaygreenApi\Api\GestionDeLadresseApi(
@@ -97,11 +99,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GestionDeLadresseApi->apiIdentifiantAddressPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -119,10 +119,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-
