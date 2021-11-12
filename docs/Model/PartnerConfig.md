@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **status** | **string** |  | [optional]
 **mode** | **string** |  |
 **available_payment_mode** | **string[]** |  | [optional] [readonly]
-**iframe** | **string[]** |  | [optional] [readonly]
+**iframe** | **array<string,array<string,string>>** |  | [optional] [readonly]
 **is_limited** | **bool** |  | [optional] [readonly]
 **sold_available** | **int** |  | [optional] [readonly]
 

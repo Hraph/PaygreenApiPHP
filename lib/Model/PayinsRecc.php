@@ -73,7 +73,7 @@ class PayinsRecc implements ModelInterface, ArrayAccess, \JsonSerializable
         'billing_address' => '\Hraph\PaygreenApi\Model\PayinsShippingAddress',
         'card' => '\Hraph\PaygreenApi\Model\PayinsCard',
         'metadata' => 'array<string,string>',
-        'eligible_amount' => 'string[]',
+        'eligible_amount' => 'array<string,string>',
         'with_payment_link' => 'bool',
         'emails' => 'string[]',
         'content_mail' => 'string',
@@ -632,7 +632,7 @@ class PayinsRecc implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets eligible_amount
      *
-     * @return string[]|null
+     * @return array<string,string>|null
      */
     public function getEligibleAmount()
     {
@@ -642,7 +642,7 @@ class PayinsRecc implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets eligible_amount
      *
-     * @param string[]|null $eligible_amount eligible_amount
+     * @param array<string,string>|null $eligible_amount eligible_amount
      *
      * @return self
      */

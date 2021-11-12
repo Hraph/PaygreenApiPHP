@@ -65,7 +65,7 @@ class PartnerConfig implements ModelInterface, ArrayAccess, \JsonSerializable
         'status' => 'string',
         'mode' => 'string',
         'available_payment_mode' => 'string[]',
-        'iframe' => 'string[]',
+        'iframe' => 'array<string,array<string,string>>',
         'is_limited' => 'bool',
         'sold_available' => 'int'
     ];
@@ -374,7 +374,7 @@ class PartnerConfig implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets iframe
      *
-     * @return string[]|null
+     * @return array<string,array<string,string>>|null
      */
     public function getIframe()
     {
@@ -384,7 +384,7 @@ class PartnerConfig implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets iframe
      *
-     * @param string[]|null $iframe iframe
+     * @param array<string,array<string,string>>|null $iframe iframe
      *
      * @return self
      */

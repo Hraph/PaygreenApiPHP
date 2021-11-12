@@ -71,7 +71,7 @@ class Payins implements ModelInterface, ArrayAccess, \JsonSerializable
         'shipping_address' => '\Hraph\PaygreenApi\Model\PayinsShippingAddress',
         'billing_address' => '\Hraph\PaygreenApi\Model\PayinsShippingAddress',
         'metadata' => 'array<string,string>',
-        'eligible_amount' => 'string[]',
+        'eligible_amount' => 'array<string,string>',
         'card' => '\Hraph\PaygreenApi\Model\PayinsCard',
         'with_payment_link' => 'bool',
         'emails' => 'string[]',
@@ -578,7 +578,7 @@ class Payins implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets eligible_amount
      *
-     * @return string[]|null
+     * @return array<string,string>|null
      */
     public function getEligibleAmount()
     {
@@ -588,7 +588,7 @@ class Payins implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets eligible_amount
      *
-     * @param string[]|null $eligible_amount eligible_amount
+     * @param array<string,string>|null $eligible_amount eligible_amount
      *
      * @return self
      */

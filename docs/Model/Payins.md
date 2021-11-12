@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **shipping_address** | [**\Hraph\PaygreenApi\Model\PayinsShippingAddress**](PayinsShippingAddress.md) |  | [optional]
 **billing_address** | [**\Hraph\PaygreenApi\Model\PayinsShippingAddress**](PayinsShippingAddress.md) |  | [optional]
 **metadata** | **array<string,string>** |  | [optional]
-**eligible_amount** | **string[]** |  | [optional]
+**eligible_amount** | **array<string,string>** |  | [optional]
 **card** | [**\Hraph\PaygreenApi\Model\PayinsCard**](PayinsCard.md) |  | [optional]
 **with_payment_link** | **bool** |  | [optional] [readonly]
 **emails** | **string[]** |  | [optional] [readonly]

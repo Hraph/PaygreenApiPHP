@@ -79,7 +79,7 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
         'schedules' => '\Hraph\PaygreenApi\Model\TransactionSchedules',
         'donation' => '\Hraph\PaygreenApi\Model\TransactionDonation',
         'metadata' => 'array<string,string>',
-        'eligible_amount' => 'string[]',
+        'eligible_amount' => 'array<string,string>',
         'explanation' => 'string',
         'id_fingerprint' => 'int',
         'created_at' => '\DateTime',
@@ -827,7 +827,7 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets eligible_amount
      *
-     * @return string[]|null
+     * @return array<string,string>|null
      */
     public function getEligibleAmount()
     {
@@ -837,7 +837,7 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets eligible_amount
      *
-     * @param string[]|null $eligible_amount eligible_amount
+     * @param array<string,string>|null $eligible_amount eligible_amount
      *
      * @return self
      */

@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **schedules** | [**\Hraph\PaygreenApi\Model\TransactionSchedules**](TransactionSchedules.md) |  | [optional]
 **donation** | [**\Hraph\PaygreenApi\Model\TransactionDonation**](TransactionDonation.md) |  | [optional]
 **metadata** | **array<string,string>** |  | [optional]
-**eligible_amount** | **string[]** |  | [optional]
+**eligible_amount** | **array<string,string>** |  | [optional]
 **explanation** | **string** |  | [optional] [readonly]
 **id_fingerprint** | **int** |  | [optional]
 **created_at** | **\DateTime** |  | [optional] [readonly]
