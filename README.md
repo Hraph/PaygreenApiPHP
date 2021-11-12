@@ -6,7 +6,7 @@ Specifications for Paygreen.io API are available [here](https://paygreen.fr/docu
 
 ## Requirements
 
-PHP 5.5 and later
+PHP 7.1 and later
 
 ## Installation & Usage
 
