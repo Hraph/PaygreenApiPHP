@@ -3512,7 +3512,13 @@
           "readOnly": true
         },
         "iframe": {
-          "type": "array",
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
           "example": {
             "CASH": {
               "minHeight": 430,
@@ -3867,8 +3873,8 @@
           }
         },
         "eligibleAmount": {
-          "type": "array",
-          "items": {
+          "type": "object",
+          "additionalProperties": {
             "type": "string"
           },
           "example": {
@@ -4084,8 +4090,8 @@
           }
         },
         "eligibleAmount": {
-          "type": "array",
-          "items": {
+          "type": "object",
+          "additionalProperties": {
             "type": "string"
           },
           "example": {
@@ -4302,8 +4308,8 @@
           }
         },
         "eligibleAmount": {
-          "type": "array",
-          "items": {
+          "type": "object",
+          "additionalProperties": {
             "type": "string"
           },
           "example": {
