@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **billing_address** | [**\Hraph\PaygreenApi\Model\TransactionBillingAddress**](TransactionBillingAddress.md) |  | [optional]
 **schedules** | [**\Hraph\PaygreenApi\Model\TransactionSchedules**](TransactionSchedules.md) |  | [optional]
 **donation** | [**\Hraph\PaygreenApi\Model\TransactionDonation**](TransactionDonation.md) |  | [optional]
-**metadata** | **string[]** |  | [optional]
+**metadata** | **array<string,string>** |  | [optional]
 **eligible_amount** | **string[]** |  | [optional]
 **explanation** | **string** |  | [optional] [readonly]
 **id_fingerprint** | **int** |  | [optional]

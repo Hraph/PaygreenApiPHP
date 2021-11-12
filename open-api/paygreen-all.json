@@ -3857,8 +3857,8 @@
           "readOnly": true
         },
         "metadata": {
-          "type": "array",
-          "items": {
+          "type": "object",
+          "additionalProperties": {
             "type": "string"
           },
           "example": {
@@ -4074,8 +4074,8 @@
           }
         },
         "metadata": {
-          "type": "array",
-          "items": {
+          "type": "object",
+          "additionalProperties": {
             "type": "string"
           },
           "example": {
@@ -4292,8 +4292,8 @@
           }
         },
         "metadata": {
-          "type": "array",
-          "items": {
+          "type": "object",
+          "additionalProperties": {
             "type": "string"
           },
           "example": {
@@ -4513,8 +4513,8 @@
           }
         },
         "metadata": {
-          "type": "array",
-          "items": {
+          "type": "object",
+          "additionalProperties": {
             "type": "string"
           },
           "example": {
@@ -4613,8 +4613,8 @@
           }
         },
         "metadata": {
-          "type": "array",
-          "items": {
+          "type": "object",
+          "additionalProperties": {
             "type": "string"
           },
           "example": {

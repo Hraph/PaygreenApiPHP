@@ -70,7 +70,7 @@ class Payins implements ModelInterface, ArrayAccess, \JsonSerializable
         'buyer' => '\Hraph\PaygreenApi\Model\PayinsBuyer',
         'shipping_address' => '\Hraph\PaygreenApi\Model\PayinsShippingAddress',
         'billing_address' => '\Hraph\PaygreenApi\Model\PayinsShippingAddress',
-        'metadata' => 'string[]',
+        'metadata' => 'array<string,string>',
         'eligible_amount' => 'string[]',
         'card' => '\Hraph\PaygreenApi\Model\PayinsCard',
         'with_payment_link' => 'bool',
@@ -554,7 +554,7 @@ class Payins implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets metadata
      *
-     * @return string[]|null
+     * @return array<string,string>|null
      */
     public function getMetadata()
     {
@@ -564,7 +564,7 @@ class Payins implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets metadata
      *
-     * @param string[]|null $metadata metadata
+     * @param array<string,string>|null $metadata metadata
      *
      * @return self
      */
